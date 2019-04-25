@@ -42,8 +42,8 @@ const LogoWordMark = styled(NavLink)`
     background-size: cover;
     background-position: center;
 
-    height: 60px;
-    width: 217px;
+    height: 59.58px;
+    width: 216.42px;
     margin-left: 15px;
     margin-bottom: 40px;
 
