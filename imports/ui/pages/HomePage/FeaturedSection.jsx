@@ -6,16 +6,12 @@ import CollectionLabel from '../../common/CollectionLabel';
 
 import { NavLink } from 'react-router-dom';
 
-// import TNarchiveOrg from '../../images/featured/hero_internetarchive.gif';
-// import FCtheskyfolk from '../../images/featured/hero_theskyfolk.jpg';
-// import CCfriendsofbrave from '../../images/collections/tn_friends_of_brave.jpg';
-
 const FeaturedContainer = styled.div`
-    padding-top: 32px;
-    padding-bottom: 28px;
+    padding-top: 42px;
+    padding-bottom: 68px;
 
     @media (max-width: 1030px) {
-       padding: 20px;
+        padding: 20px;
     }
 `;
 
@@ -32,7 +28,7 @@ const FeaturedContentContainer = styled.div`
     grid-column-gap: 40px;
     grid-row-gap: 48px;
 
-    @media(max-width: 1030px) {
+    @media (max-width: 1030px) {
         grid-template-columns: 1fr;
         grid-row-gap: 20px;
     }
@@ -68,20 +64,25 @@ const FeaturedCardContainerWrapper = styled.div`
     border-radius: 52px;
 
     &:hover {
-        background:
-            linear-gradient(90deg, #FF7A2C 0%, #FF5F80 50.51%, #CD62FF 100%);
-        box-shadow: 0 6px 12px 0 rgba(255,50,90,0.2);
-    };
+        background: linear-gradient(
+            90deg,
+            #ff7a2c 0%,
+            #ff5f80 50.51%,
+            #cd62ff 100%
+        );
+        box-shadow: 0 6px 12px 0 rgba(255, 50, 90, 0.2);
+    }
 `;
 
 const FeaturedCardContainer = styled(NavLink)`
     border-radius: 48px;
-    background-color: #FFFFFF;
-    box-shadow: 0 6px 12px 0 rgba(0,0,0,0.08);
+    background-color: #ffffff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1),
+        0 12px 16px 0 rgba(0, 0, 0, 0.06);
 
     min-height: 400px;
     width: 100%;
-    
+
     text-decoration: none;
 
     transition: border 150ms ease-in;
@@ -96,14 +97,14 @@ const FeaturedCardContainer = styled(NavLink)`
 
     &:hover ${FeaturedCardHoverEmoji} {
         transform: translate(0, -75px);
-    };
+    }
 
     @media (hover: none) {
         /* on devices that do not have a pointer, don't have hover effects */
-        :hover{
+        :hover {
             transition: none;
-        };
-    };
+        }
+    }
 `;
 
 const FeaturedCardImage = styled.div`
@@ -127,7 +128,7 @@ const FeaturedCardTextTitle = styled.h3`
 
     font-size: 28px;
     line-height: 35px;
-    color: #9B9B9B;
+    color: #9b9b9b;
 
     text-decoration: none;
     padding: 0;
@@ -163,11 +164,11 @@ const CollectionCardHoverEmoji = styled.p`
 
 const CollectionCardContainerWrapper = styled.div`
     padding: 4px;
-    
+
     max-width: 984px;
     width: 100%;
 
-    min-height: 400px;
+    min-height: 336px;
     height: 100%;
 
     grid-column: span 2;
@@ -183,26 +184,31 @@ const CollectionCardContainerWrapper = styled.div`
     border-radius: 52px;
 
     &:hover {
-        background:
-            linear-gradient(90deg, #FF7A2C 0%, #FF5F80 50.51%, #CD62FF 100%);
-        box-shadow: 0 6px 12px 0 rgba(255,50,90,0.2);
-    };
+        background: linear-gradient(
+            90deg,
+            #ff7a2c 0%,
+            #ff5f80 50.51%,
+            #cd62ff 100%
+        );
+        box-shadow: 0 6px 12px 0 rgba(255, 50, 90, 0.2);
+    }
 
-    @media(max-width: 1030px) {
+    @media (max-width: 1030px) {
         max-width: 472px;
         grid-column: span 1;
         grid-row: span 2;
-    };
+    }
 `;
 
 const CollectionCardContainer = styled(NavLink)`
     text-decoration: none;
-    min-height: 400px;
+    min-height: 336px;
     height: 100%;
-   
+
     border-radius: 48px;
-    background-color: #FFFFFF;
-    box-shadow: 0 6px 12px 0 rgba(0,0,0,0.08);
+    background-color: #ffffff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1),
+        0 12px 16px 0 rgba(0, 0, 0, 0.06);
 
     align-self: center;
     justify-self: center;
@@ -218,20 +224,20 @@ const CollectionCardContainer = styled(NavLink)`
 
     &:hover ${CollectionCardHoverEmoji} {
         transform: translate(0, -75px);
-    };
+    }
 
     @media (hover: none) {
         /* on devices that do not have a pointer, don't have hover effects */
-        :hover{
+        :hover {
             transition: none;
             border: none;
-        };
-    };
+        }
+    }
 
-    @media(max-width: 1030px) {  
+    @media (max-width: 1030px) {
         grid-template-rows: minmax(200px, auto) auto;
         grid-template-columns: 1fr;
-    };
+    }
 `;
 
 const CollectionCardImage = styled.div`
@@ -242,9 +248,9 @@ const CollectionCardImage = styled.div`
     background-size: cover;
     background-position: center;
 
-    @media(max-width: 1030px) {
+    @media (max-width: 1030px) {
         border-radius: 48px 48px 0 0;
-    };
+    }
 `;
 
 const CollectionCardTextContainer = styled.div`
@@ -281,9 +287,9 @@ const CollectionCardTextTitle = styled.h3`
     padding: 0;
     margin: 0;
 
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
         /* font-size: 26px; */
-    };
+    }
 `;
 
 const CollectionCardTextBody = styled.p`
@@ -304,55 +310,61 @@ const CollectionCardTextBody = styled.p`
 
     padding: 14px 54px 77px 32px;
 
-    @media(max-width: 1030px) {
+    @media (max-width: 1030px) {
         /* padding-top: 32px; */
-    };
+    }
 `;
 
 export default () => {
     return (
         <FeaturedContainer>
-            <SectionLabel sectionName="Featured" featured />
+            <SectionLabel sectionName="FEATURED" featured />
 
             <FeaturedContentContainer>
-
                 <FeaturedCardContainerWrapper>
                     <FeaturedCardContainer to="/sky-folk">
-                        <FeaturedCardImage imgSrcName='/images/featured/hero_theskyfolk.jpg' />
+                        <FeaturedCardImage imgSrcName="/images/featured/hero_theskyfolk.jpg" />
                         <FeaturedCardTextContainer>
                             <FeaturedCardTextTitle>
                                 SKÝ FÓLK
-                        </FeaturedCardTextTitle>
+                            </FeaturedCardTextTitle>
                             <FeaturedCardTextBody>
                                 Stunning landscape photography and films
-                        </FeaturedCardTextBody>
+                            </FeaturedCardTextBody>
                         </FeaturedCardTextContainer>
                         <FeaturedCardHoverEmoji>
-                            <span role="img" aria-labelledby="desert emoji">🏜️</span>
+                            <span role="img" aria-labelledby="desert emoji">
+                                🏜️
+                            </span>
                         </FeaturedCardHoverEmoji>
                     </FeaturedCardContainer>
                 </FeaturedCardContainerWrapper>
 
                 <FeaturedCardContainerWrapper>
                     <FeaturedCardContainer to="/internet-archive">
-                        <FeaturedCardImage imgSrcName='/images/featured/hero_internetarchive.gif' />
+                        <FeaturedCardImage imgSrcName="/images/featured/hero_internetarchive.gif" />
                         <FeaturedCardTextContainer>
                             <FeaturedCardTextTitle>
                                 Internet Archive
-                        </FeaturedCardTextTitle>
+                            </FeaturedCardTextTitle>
                             <FeaturedCardTextBody>
                                 The world's largest library
-                        </FeaturedCardTextBody>
+                            </FeaturedCardTextBody>
                         </FeaturedCardTextContainer>
                         <FeaturedCardHoverEmoji>
-                            <span role="img" aria-labelledby="classical building emoji">🏛️</span>
+                            <span
+                                role="img"
+                                aria-labelledby="classical building emoji"
+                            >
+                                🏛️
+                            </span>
                         </FeaturedCardHoverEmoji>
                     </FeaturedCardContainer>
                 </FeaturedCardContainerWrapper>
 
                 <CollectionCardContainerWrapper>
                     <CollectionCardContainer to="/friends-of-brave">
-                        <CollectionCardImage imgSrcName='/images/collections/tn_friends_of_brave.jpg' />
+                        <CollectionCardImage imgSrcName="/images/collections/tn_friends_of_brave.jpg" />
 
                         <CollectionCardTextContainer>
                             <CollectionCardTitleContainer>
@@ -363,15 +375,18 @@ export default () => {
                             </CollectionCardTitleContainer>
 
                             <CollectionCardTextBody>
-                                The creators, enthusiasts, and companies who are helping bring Brave's vision to life
+                                The creators, enthusiasts, and companies who are
+                                helping bring Brave's vision to life
                             </CollectionCardTextBody>
                         </CollectionCardTextContainer>
                         <CollectionCardHoverEmoji>
-                            <span role="img" aria-labelledby="lion emoji">🦁</span>
+                            <span role="img" aria-labelledby="lion emoji">
+                                🦁
+                            </span>
                         </CollectionCardHoverEmoji>
                     </CollectionCardContainer>
                 </CollectionCardContainerWrapper>
             </FeaturedContentContainer>
         </FeaturedContainer>
-    )
-}
+    );
+};
