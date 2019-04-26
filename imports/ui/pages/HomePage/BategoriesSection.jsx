@@ -1,17 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// import list_end_icon from '../../images/page-elements/list-end-icon.svg';
-
-import SectionLabel from '../../common/SectionLabel';
-
 import BategoryContentCard from '../../common/BategoryContentCard';
 
 import {
     Tabs as UnstyledTabs,
     TabList as UnstyledTabList,
     Tab as UnstyledTab,
-    TabPanel as UnstyledTabPanel
+    TabPanel as UnstyledTabPanel,
 } from 'react-tabs';
 
 import { BategoriesData } from '../../../fake-data/Data';
@@ -19,20 +15,21 @@ import { BategoriesData } from '../../../fake-data/Data';
 const BategoriesContainer = styled.div`
     /* or else it jumps weirdly when switching to a tab with a short list */
     min-height: 100vh;
+    background-color: #f2f2f2;
 `;
 
 const BategoriesNavigationTopContainer = styled.div`
     @media (max-width: 1030px) {
-       /* padding: 32px 32px 0 32px; */
+        /* padding: 32px 32px 0 32px; */
     }
 `;
 
 const BategoriesNavigationBackgroundContainer = styled.div`
-    padding-top: 20px;
+    padding-top: 37px;
     width: 100%;
     position: sticky;
     top: 0;
-    background-color: #F2F2F2;
+    background-color: #f2f2f2;
 `;
 
 const BategoriesNavigationOverlayContainer = styled.div`
@@ -47,7 +44,7 @@ const BategoriesNavigationOverlay = styled.div`
     height: 40px;
     width: 180px;
     margin-left: auto;
-    background: linear-gradient(90deg, rgba(255,255,255,0.001), #F2F2F2);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.001), #f2f2f2);
     pointer-events: none;
 
     z-index: 1;
@@ -61,9 +58,7 @@ const BategoriesNavigationOverlay = styled.div`
 // ——————————————————————————————————————————————————————————————————
 // ——————————————————————————————————————————————————————————————————
 
-const Tabs = styled(UnstyledTabs)`
-    
-`;
+const Tabs = styled(UnstyledTabs)``;
 
 const TabList = styled(UnstyledTabList)`
     list-style-type: none;
@@ -75,12 +70,12 @@ const TabList = styled(UnstyledTabList)`
     scrollbar-width: none;
 
     padding-bottom: 20px;
-    border-bottom: 1px solid #DADADA;
+    border-bottom: 1px solid #dadada;
 
     margin-bottom: 35px;
 
     @media (max-width: 1030px) {
-       padding: 0 20px 20px 20px;
+        padding: 0 20px 20px 20px;
     }
 `;
 
@@ -103,18 +98,18 @@ const Tab = styled(UnstyledTab)`
 
     &:hover {
         cursor: pointer;
-        background-color: #FFFFFF;
+        background-color: #ffffff;
         transition: none;
     }
 
     &.is-selected {
-        background: linear-gradient(270deg, #FF7A2C 0%, #FF5F80 50.51%, #CD62FF 100%);
-        box-shadow: inset 0 0 6px 0 rgba(255,255,255,0.5);
+        background: black;
+        box-shadow: inset 0 0 6px 0 rgba(255, 255, 255, 0.5);
         border-radius: 20px;
     }
 
     &.is-selected > p {
-        color: #FFF;
+        color: #fff;
     }
 
     &:focus {
@@ -163,9 +158,9 @@ const BategoriesContentContainer = styled.div`
     grid-column-gap: 40px;
     grid-row-gap: 36px;
 
-    padding-bottom: 36px;
+    padding-bottom: 45px;
 
-    @media(max-width: 1030px) {
+    @media (max-width: 1030px) {
         grid-template-columns: 1fr;
         padding: 0 20px 36px 20px;
 
@@ -180,7 +175,7 @@ const BategoriesListEndIconContainer = styled.div`
     flex-direction: row;
     justify-content: center;
 
-    @media(max-width: 1030px) {
+    @media (max-width: 1030px) {
         grid-column: 1 / span 1;
     }
 `;
@@ -195,33 +190,27 @@ const BategoriesListEndIcon = styled.div`
     align-self: center;
 `;
 
-
-
 export default () => {
     return (
         <BategoriesContainer>
             <BategoriesNavigationTopContainer>
                 <Tabs
-                    selectedTabClassName='is-selected'
-                    selectedTabPanelClassName='is-selected' >
-
+                    selectedTabClassName="is-selected"
+                    selectedTabPanelClassName="is-selected"
+                >
                     {/* Loop through the top level navigation items 
                         so we can populate the "Tabs" as top-level navigation items */}
                     <BategoriesNavigationBackgroundContainer>
                         <BategoriesNavigationOverlayContainer>
-
-                            {/* putting this inside so that I can set a background colour and make this sticky */}
-                            <SectionLabel sectionName="BATegories" bategories />
-
                             <BategoriesNavigationOverlay />
                             <TabList>
-                                {BategoriesData.map((allBategories) =>
+                                {BategoriesData.map(allBategories => (
                                     <Tab key={allBategories.bategoryName}>
                                         <TabText>
                                             {allBategories.bategoryName}
                                         </TabText>
                                     </Tab>
-                                )}
+                                ))}
                             </TabList>
                         </BategoriesNavigationOverlayContainer>
                     </BategoriesNavigationBackgroundContainer>
@@ -242,30 +231,38 @@ export default () => {
                         so we're looping through the same thing twice; once for
                         the navigation items, again for the panels */}
 
-                    {BategoriesData.map((allBategories) =>
+                    {BategoriesData.map(allBategories => (
                         <TabPanel key={allBategories.bategoryName}>
-
                             {/* The actual content of [bategoryName] */}
                             {/* Loop through this bategory so we can create a panel for each tab item */}
 
                             {/* Now loop through this specific Sub Category's "featured content" array */}
                             <BategoriesContentContainer>
-                                {allBategories.contentInBategory.map((contentInBategory) =>
-                                    <BategoryContentCard
-                                        key={contentInBategory.contentName}
-                                        urlLink={contentInBategory.urlLink}
-                                        imageLink={contentInBategory.imageLink}
-                                        contentName={contentInBategory.contentName}
-                                        subtitle={contentInBategory.subtitle} />
+                                {allBategories.contentInBategory.map(
+                                    contentInBategory => (
+                                        <BategoryContentCard
+                                            key={contentInBategory.contentName}
+                                            urlLink={contentInBategory.urlLink}
+                                            imageLink={
+                                                contentInBategory.imageLink
+                                            }
+                                            contentName={
+                                                contentInBategory.contentName
+                                            }
+                                            subtitle={
+                                                contentInBategory.subtitle
+                                            }
+                                        />
+                                    )
                                 )}
-                                <BategoriesListEndIconContainer>
+                                {/* <BategoriesListEndIconContainer>
                                     <BategoriesListEndIcon />
-                                </BategoriesListEndIconContainer>
+                                </BategoriesListEndIconContainer> */}
                             </BategoriesContentContainer>
                         </TabPanel>
-                    )}
+                    ))}
                 </Tabs>
             </BategoriesNavigationTopContainer>
         </BategoriesContainer>
-    )
-}
+    );
+};
