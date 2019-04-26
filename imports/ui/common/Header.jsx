@@ -6,19 +6,22 @@ import styled, { css } from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 const TopbarContainer = styled.div`
-    background-color: white;
+    /* background-color: white; */
     z-index: 2;
 
     width: 100%;
-    height: 60px;
+    height: 64px;
 
     position: absolute;
     left: 0;
     right: 0;
     margin: auto;
 
-    ${props => props.notch && css`
-        max-width: 1024px;
+    ${props =>
+        props.notch &&
+        css`
+            background-color: rgba(255, 255, 255, 0.8);
+            /* max-width: 1024px;
         margin-left: auto;
         margin-right: auto;
 
@@ -28,17 +31,17 @@ const TopbarContainer = styled.div`
 
         @media(max-width: 1024px) {
             border-radius: 0;
-        }
-    `}
+        } */
+        `}
 `;
 
 const TopbarContentContainer = styled.div`
-    max-width: 984px;
+    /* max-width: 984px; */
     width: 100%;
     height: 100%;
 
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
 
     display: grid;
     grid-template-rows: auto;
@@ -49,50 +52,39 @@ const LogoWordContainer = styled(NavLink)`
     height: 20.1px;
     width: 73.03px;
 
-    padding: 10px;
+    margin-left: 20px;
 
     align-self: center;
     justify-self: start;
 
-    @media(max-width: 1030px) {
-        /* padding: 10px 10px 10px 30px; */
-        margin-left: 20px;
-    };
-
-    ${props => props.show && css`
-        visibility: hidden;
-    `}
+    ${props =>
+        props.show &&
+        css`
+            visibility: hidden;
+        `}
 `;
 
-const LogoWordImg = styled.img.attrs({
-    src: '/images/logo_text@2x.png'
-})`
+const LogoWordImg = styled.img.attrs({ src: '/images/logo_text@2x.png' })`
     height: 100%;
     width: 100%;
 `;
 
 const AboutLink = styled(NavLink)`
-    /* font-family: 'Avenir Next Bold'; */
+    margin-right: 28px;
+
     font-family: 'Muli', Arial, Helvetica, sans-serif;
     font-weight: 800;
     font-style: normal;
-    
+
     font-size: 16px;
     text-decoration: none;
-    color: #9B9B9B;
-
-    padding: 10px;
+    color: #9b9b9b;
 
     align-self: center;
     justify-self: end;
-
-    @media(max-width: 1030px) {
-        /* padding: 10px 30px 10px 10px; */
-        margin-right: 20px;
-    };
 `;
 
-export default (props) => {
+export default props => {
     return (
         <TopbarContainer notch={props.notch}>
             <TopbarContentContainer>
@@ -102,5 +94,5 @@ export default (props) => {
                 <AboutLink to="/about">About</AboutLink>
             </TopbarContentContainer>
         </TopbarContainer>
-    )
-}
+    );
+};
