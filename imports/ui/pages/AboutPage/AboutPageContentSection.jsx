@@ -189,9 +189,9 @@ const AboutTeamMemberContainer = styled.a`
     }
 `;
 
-const AboutTeamMemberPhoto = styled.img.attrs({
-    src: props => props.imgSrc
-})`
+const AboutTeamMemberPhoto = styled.img.attrs(
+    props => ({src: props.imgSrc}))
+`
     height: 180px;
     width: 100%;
 
@@ -316,9 +316,9 @@ const AboutTwitterButton = styled.a`
     }
 `;
 
-const AboutTwitterText = styled.img.attrs({
-    src: props => props.imgSrc
-})`
+const AboutTwitterText = styled.img.attrs(
+    props => ({src: props.imgSrc})
+)`
     width: 85px;
 `;
 

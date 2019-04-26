@@ -94,7 +94,7 @@ const BategoryCardContainer = styled.a`
     height: 100%;
     border-radius: 48px;
     background-color: #FFFFFF;
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1), 0 12px 16px 0 rgba(0,0,0,0.06);
 
     text-decoration: none;
 

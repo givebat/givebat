@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import SectionLabel from '../../common/SectionLabel';
 import CollectionLabel from '../../common/CollectionLabel';
 
 import { NavLink } from 'react-router-dom';
 
+
 const FeaturedContainer = styled.div`
-    padding-top: 42px;
+    padding-top: 68px;
     padding-bottom: 68px;
 
     @media (max-width: 1030px) {
@@ -318,7 +318,7 @@ const CollectionCardTextBody = styled.p`
 export default () => {
     return (
         <FeaturedContainer>
-            <SectionLabel sectionName="FEATURED" featured />
+            {/* <SectionLabel sectionName="FEATURED" featured /> */}
 
             <FeaturedContentContainer>
                 <FeaturedCardContainerWrapper>
