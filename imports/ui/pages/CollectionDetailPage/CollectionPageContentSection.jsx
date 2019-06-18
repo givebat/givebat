@@ -8,6 +8,7 @@ import { Route, Switch } from 'react-router-dom';
 import CollectionLabel from '../../common/CollectionLabel';
 
 import FriendsOfBraveContent from './CollectionPageContent/FriendsOfBraveContent';
+import CryptoCompanionsContent from './CollectionPageContent/CryptoCompanionsContent';
 
 const ContentSectionBackgroundWrapper = styled.div`
     padding: 0;
@@ -274,6 +275,8 @@ export default (props) => {
                             <Switch>
                                 <Route path="/friends-of-brave"
                                     render={props => <FriendsOfBraveContent {...props} />} />
+                                <Route path="/crypto-companions"
+                                    render={props => <CryptoCompanionsContent {...props} />} />
                             </Switch>
 
                         </CollectionBodyContainer>

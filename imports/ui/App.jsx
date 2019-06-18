@@ -51,6 +51,43 @@ class App extends Component {
                             <Route path="/about" component={AboutPage} />
 
                             <Route
+                                path="/indizr"
+                                render={props => (
+                                    <FeaturedDetailPage
+                                        {...props}
+                                        title={'Indizr'}
+                                        subtitle={
+                                            'Everything Web 3.0'
+                                        }
+                                        link={'https://indizr.com'}
+                                        heroImage={
+                                            '/images/featured/hero_indizr.jpg'
+                                        }
+                                        author={'Daniel James'}
+                                        date={'June 19th, 2019'}
+                                    />
+                                )}
+                            />
+
+                            <Route
+                                path="/changelog"
+                                render={props => (
+                                    <FeaturedDetailPage
+                                        {...props}
+                                        title={'Changelog'}
+                                        subtitle={
+                                            'News and podcasts for developers'
+                                        }
+                                        link={'https://changelog.com'}
+                                        heroImage={
+                                            '/images/featured/hero_changelog.jpg'
+                                        }
+                                        author={'Daniel James'}
+                                        date={'June 19th, 2019'}
+                                    />
+                                )}
+                            />
+                            <Route
                                 path="/sky-folk"
                                 render={props => (
                                     <FeaturedDetailPage
@@ -85,6 +122,20 @@ class App extends Component {
                                 )}
                             />
 
+                            <Route
+                                path="/crypto-companions"
+                                render={props => (
+                                    <CollectionDetailPage
+                                        {...props}
+                                        title={'Crypto Companions'}
+                                        heroImage={
+                                            '/images/collections/tn_crypto_companions.jpg'
+                                        }
+                                        author={'Daniel James'}
+                                        date={'June 19th, 2019'}
+                                    />
+                                )}
+                            />
                             <Route
                                 path="/friends-of-brave"
                                 render={props => (

@@ -5,6 +5,8 @@ import { Route, Switch } from 'react-router-dom';
 
 import SkyFolkContent from './FeaturedPageContent/SkyFolkContent';
 import InternetArchiveContent from './FeaturedPageContent/InternetArchiveContent';
+import IndizrContent from './FeaturedPageContent/IndizrContent';
+import ChangelogContent from './FeaturedPageContent/ChangelogContent';
 
 // import FunCornerSvg from '../../images/page-elements/funcorner.svg';
 
@@ -362,6 +364,10 @@ export default (props) => {
                                     render={props => <SkyFolkContent {...props} />} />
                                 <Route path="/internet-archive"
                                     render={props => <InternetArchiveContent {...props} />} />
+                                <Route path="/indizr"
+                                    render={props => <IndizrContent {...props} />} />
+                                <Route path="/changelog"
+                                    render={props => <ChangelogContent {...props} />} />
                             </Switch>
 
                             {/* <FeaturedContentBodyParagraph>
