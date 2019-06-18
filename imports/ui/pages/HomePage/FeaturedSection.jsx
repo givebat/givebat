@@ -322,66 +322,65 @@ export default () => {
 
             <FeaturedContentContainer>
                 <FeaturedCardContainerWrapper>
-                    <FeaturedCardContainer to="/sky-folk">
-                        <FeaturedCardImage imgSrcName="/images/featured/hero_theskyfolk.jpg" />
+                    <FeaturedCardContainer to="/changelog">
+                        <FeaturedCardImage imgSrcName="/images/featured/hero_changelog.jpg" />
                         <FeaturedCardTextContainer>
                             <FeaturedCardTextTitle>
-                                SKÝ FÓLK
+                                Changelog
                             </FeaturedCardTextTitle>
                             <FeaturedCardTextBody>
-                                Stunning landscape photography and films
+                                News and podcasts for developers
                             </FeaturedCardTextBody>
                         </FeaturedCardTextContainer>
                         <FeaturedCardHoverEmoji>
-                            <span role="img" aria-labelledby="desert emoji">
-                                🏜️
+                            <span role="img" aria-labelledby="laptop emoji">
+                                💻
                             </span>
                         </FeaturedCardHoverEmoji>
                     </FeaturedCardContainer>
                 </FeaturedCardContainerWrapper>
 
                 <FeaturedCardContainerWrapper>
-                    <FeaturedCardContainer to="/internet-archive">
-                        <FeaturedCardImage imgSrcName="/images/featured/hero_internetarchive.gif" />
+                    <FeaturedCardContainer to="/indizr">
+                        <FeaturedCardImage imgSrcName="/images/featured/hero_indizr.jpg" />
                         <FeaturedCardTextContainer>
                             <FeaturedCardTextTitle>
-                                Internet Archive
+                                Indizr
                             </FeaturedCardTextTitle>
                             <FeaturedCardTextBody>
-                                The world's largest library
+                                Everything Web 3.0
                             </FeaturedCardTextBody>
                         </FeaturedCardTextContainer>
                         <FeaturedCardHoverEmoji>
                             <span
                                 role="img"
-                                aria-labelledby="classical building emoji"
+                                aria-labelledby="web emoji"
                             >
-                                🏛️
+                                🕸
                             </span>
                         </FeaturedCardHoverEmoji>
                     </FeaturedCardContainer>
                 </FeaturedCardContainerWrapper>
 
                 <CollectionCardContainerWrapper>
-                    <CollectionCardContainer to="/friends-of-brave">
-                        <CollectionCardImage imgSrcName="/images/collections/tn_friends_of_brave.jpg" />
+                    <CollectionCardContainer to="/crypto-companions">
+                        <CollectionCardImage imgSrcName="/images/collections/tn_crypto_companions.jpg" />
 
                         <CollectionCardTextContainer>
                             <CollectionCardTitleContainer>
                                 <CollectionLabel labelName="COLLECTION" />
                                 <CollectionCardTextTitle>
-                                    Friends of Brave
+                                    Crypto Companions
                                 </CollectionCardTextTitle>
                             </CollectionCardTitleContainer>
 
                             <CollectionCardTextBody>
-                                The creators, enthusiasts, and companies who are
-                                helping bring Brave's vision to life
+                                The companies and creators driving the world of crypto forward
                             </CollectionCardTextBody>
                         </CollectionCardTextContainer>
                         <CollectionCardHoverEmoji>
-                            <span role="img" aria-labelledby="lion emoji">
-                                🦁
+                            <span role="img" aria-labelledby="money with wings emoji">
+                                💸
                             </span>
                         </CollectionCardHoverEmoji>
                     </CollectionCardContainer>
