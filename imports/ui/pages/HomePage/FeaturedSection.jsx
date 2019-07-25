@@ -323,7 +323,7 @@ export default () => {
             <FeaturedContentContainer>
                 <FeaturedCardContainerWrapper>
                     <FeaturedCardContainer to="/changelog">
-                        <FeaturedCardImage imgSrcName="/images/featured/hero_changelog.jpg" />
+                        <FeaturedCardImage imgSrcName="/images/featured/body_changelog_2.png" />
                         <FeaturedCardTextContainer>
                             <FeaturedCardTextTitle>
                                 Changelog
@@ -342,7 +342,7 @@ export default () => {
 
                 <FeaturedCardContainerWrapper>
                     <FeaturedCardContainer to="/indizr">
-                        <FeaturedCardImage imgSrcName="/images/featured/hero_indizr.jpg" />
+                        <FeaturedCardImage imgSrcName="/images/featured/hero_indizr2.jpg" />
                         <FeaturedCardTextContainer>
                             <FeaturedCardTextTitle>
                                 Indizr
@@ -352,10 +352,7 @@ export default () => {
                             </FeaturedCardTextBody>
                         </FeaturedCardTextContainer>
                         <FeaturedCardHoverEmoji>
-                            <span
-                                role="img"
-                                aria-labelledby="web emoji"
-                            >
+                            <span role="img" aria-labelledby="web emoji">
                                 🕸
                             </span>
                         </FeaturedCardHoverEmoji>
@@ -364,7 +361,7 @@ export default () => {
 
                 <CollectionCardContainerWrapper>
                     <CollectionCardContainer to="/crypto-companions">
-                        <CollectionCardImage imgSrcName="/images/collections/tn_crypto_companions.jpg" />
+                        <CollectionCardImage imgSrcName="/images/collections/hero_crypto_companions.jpg" />
 
                         <CollectionCardTextContainer>
                             <CollectionCardTitleContainer>
@@ -375,11 +372,15 @@ export default () => {
                             </CollectionCardTitleContainer>
 
                             <CollectionCardTextBody>
-                                The companies and creators driving the world of crypto forward
+                                The brave crypto companies and creators driving
+                                the world of crypto forward
                             </CollectionCardTextBody>
                         </CollectionCardTextContainer>
                         <CollectionCardHoverEmoji>
-                            <span role="img" aria-labelledby="money with wings emoji">
+                            <span
+                                role="img"
+                                aria-labelledby="money with wings emoji"
+                            >
                                 💸
                             </span>
                         </CollectionCardHoverEmoji>

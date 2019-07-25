@@ -56,15 +56,13 @@ class App extends Component {
                                     <FeaturedDetailPage
                                         {...props}
                                         title={'Indizr'}
-                                        subtitle={
-                                            'Everything Web 3.0'
-                                        }
+                                        subtitle={'Everything Web 3.0'}
                                         link={'https://indizr.com'}
                                         heroImage={
-                                            '/images/featured/hero_indizr.jpg'
+                                            '/images/featured/hero_indizr2.jpg'
                                         }
                                         author={'Daniel James'}
-                                        date={'June 19th, 2019'}
+                                        date={'July 25th, 2019'}
                                     />
                                 )}
                             />
@@ -80,10 +78,10 @@ class App extends Component {
                                         }
                                         link={'https://changelog.com'}
                                         heroImage={
-                                            '/images/featured/hero_changelog.jpg'
+                                            '/images/featured/body_changelog_2.png'
                                         }
                                         author={'Daniel James'}
-                                        date={'June 19th, 2019'}
+                                        date={'July 25th, 2019'}
                                     />
                                 )}
                             />
@@ -129,10 +127,10 @@ class App extends Component {
                                         {...props}
                                         title={'Crypto Companions'}
                                         heroImage={
-                                            '/images/collections/tn_crypto_companions.jpg'
+                                            '/images/collections/hero_crypto_companions.jpg'
                                         }
                                         author={'Daniel James'}
-                                        date={'June 19th, 2019'}
+                                        date={'July 25th, 2019'}
                                     />
                                 )}
                             />
