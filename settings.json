@@ -1,0 +1,7 @@
+{
+  "galaxy.meteor.com": {
+    "env": {
+      "MONGO_URL": "mongodb+srv://givebat:givebat@givebat-cluster0-gubjy.mongodb.net/test?retryWrites=tru"
+    }
+  }
+}

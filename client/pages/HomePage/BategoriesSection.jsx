@@ -10,7 +10,7 @@ import {
     TabPanel as UnstyledTabPanel,
 } from 'react-tabs';
 
-import { BategoriesData } from '../../../fake-data/Data';
+import { BategoriesData } from '../../../imports/fake-data/Data';
 
 const BategoriesContainer = styled.div`
     /* or else it jumps weirdly when switching to a tab with a short list */
