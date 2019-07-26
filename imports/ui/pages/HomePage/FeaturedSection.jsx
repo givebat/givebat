@@ -164,7 +164,7 @@ const CollectionCardContainerWrapper = styled.div`
     max-width: 984px;
     width: 100%;
 
-    min-height: 336px;
+    min-height: 328px;
     height: 100%;
 
     grid-column: span 2;
