@@ -63,10 +63,9 @@ const BategoryCardContainerWrapper = styled.div`
     border-radius: 52px;
 
     &:hover {
-        background:
-            linear-gradient(90deg, #FF7A2C 0%, #FF5F80 50.51%, #CD62FF 100%);
-        box-shadow: 0 6px 12px 0 rgba(255,50,90,0.2);
-    };
+        background-color: #ff325a;
+        box-shadow: 0 6px 12px 0 rgba(255, 50, 90, 0.2);
+    }
 
     &:hover ${BategoriesVisitLabel} {
         opacity: 1;

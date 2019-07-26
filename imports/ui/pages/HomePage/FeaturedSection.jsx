@@ -64,12 +64,8 @@ const FeaturedCardContainerWrapper = styled.div`
     border-radius: 52px;
 
     &:hover {
-        background: linear-gradient(
-            90deg,
-            #ff7a2c 0%,
-            #ff5f80 50.51%,
-            #cd62ff 100%
-        );
+        background-color: #ff325a;
+
         box-shadow: 0 6px 12px 0 rgba(255, 50, 90, 0.2);
     }
 `;
@@ -184,12 +180,7 @@ const CollectionCardContainerWrapper = styled.div`
     border-radius: 52px;
 
     &:hover {
-        background: linear-gradient(
-            90deg,
-            #ff7a2c 0%,
-            #ff5f80 50.51%,
-            #cd62ff 100%
-        );
+        background-color: #ff325a;
         box-shadow: 0 6px 12px 0 rgba(255, 50, 90, 0.2);
     }
 
