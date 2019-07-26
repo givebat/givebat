@@ -13,10 +13,10 @@ const ContentSectionContainer = styled.div`
 `;
 
 const GradientContainerTop = styled.div`
-    background: linear-gradient(
-        180deg,
-        rgba(50, 106, 255, 0.14) 0.07%,
-        rgba(255, 50, 207, 0) 100%
+    background-image: linear-gradient(
+        to bottom,
+        rgba(50, 106, 255, 0.14) 0%,
+        rgba(255, 50, 207, 0)
     );
 
     position: absolute;
