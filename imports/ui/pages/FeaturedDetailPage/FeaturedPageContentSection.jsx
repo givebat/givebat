@@ -90,19 +90,10 @@ const FeaturedContentTitle = styled.h1`
     line-height: 60px;
     letter-spacing: -0.6px;
 
-    color: #939393;
+    color: #ff325a;
 
     margin: 0;
     padding: 49px 0 0 0;
-
-    background: -webkit-linear-gradient(360deg, #FF7A2C 0%, #FF5F80 50.51%, #CD62FF 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    &::selection {
-        -webkit-text-fill-color: #FFFFFF;
-    }
 `;
 
 const FeaturedContentSubTitle = styled.h2`
