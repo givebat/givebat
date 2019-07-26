@@ -6,7 +6,7 @@ import Header from '../../common/Header';
 import { NavLink } from 'react-router-dom';
 
 const Container = styled.div`
-    min-height: 220px;
+    min-height: 182px;
     width: 100%;
     z-index: 3;
 
@@ -40,7 +40,7 @@ const LogoWordMark = styled(NavLink)`
     background-size: cover;
     background-position: center;
 
-    height: 60px;
+    height: 59px;
     width: 217px;
 
     @media (max-width: 1030px) {
