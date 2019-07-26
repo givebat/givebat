@@ -323,6 +323,12 @@ export const BategoriesData =
                         imageLink: '/images/thumbnails/slate.com.jpg'
                     },
                     {
+                        contentName: "Steemit",
+                        urlLink: "https://steemit.com",
+                        subtitle: "A social media platform where everyone gets paid",
+                        imageLink: '/images/thumbnails/steemit.com.jpg'
+                    },
+                    {
                         contentName: "ravelry",
                         urlLink: "https://www.ravelry.com",
                         subtitle: "A community for knitters, crocheters, designers, spinners, weavers and dyers",
@@ -797,6 +803,12 @@ export const BategoriesData =
                         imageLink: '/images/thumbnails/dvdvideosoft.com.jpg'
                     },
                     {
+                        contentName: "Steemit",
+                        urlLink: "https://steemit.com",
+                        subtitle: "A social media platform where everyone gets paid",
+                        imageLink: '/images/thumbnails/steemit.com.jpg'
+                    },
+                    {
                         contentName: "Slashdot",
                         urlLink: "https://slashdot.org",
                         subtitle: "News for nerds, stuff that matters",
@@ -873,6 +885,12 @@ export const BategoriesData =
                         urlLink: "https://ccn.com",
                         subtitle: "Cryptocurrency news and market updates",
                         imageLink: '/images/thumbnails/ccn.com.jpg'
+                    },
+                    {
+                        contentName: "Tor Project",
+                        urlLink: "https://www.torproject.org",
+                        subtitle: "Open-source software for enabling anonymous communication",
+                        imageLink: '/images/thumbnails/torproject.org.jpg'
                     },
                     {
                         contentName: "MyEtherWallet",
@@ -1515,6 +1533,12 @@ export const BategoriesData =
                         urlLink: "https://cointiply.com",
                         subtitle: "The highest paying bitcoin faucet & rewards site",
                         imageLink: '/images/thumbnails/cointiply.com.jpg'
+                    },
+                    {
+                        contentName: "Tor Project",
+                        urlLink: "https://www.torproject.org",
+                        subtitle: "Open-source software for enabling anonymous communication",
+                        imageLink: '/images/thumbnails/torproject.org.jpg'
                     },
                     {
                         contentName: "MyEtherWallet",

@@ -215,6 +215,12 @@ export default () => {
 
             <CollectionCardContainer>
                 <BategoryContentCard
+                    contentName="Steemit"
+                    urlLink="https://steemit.com"
+                    subtitle="A social media platform where everyone gets paid"
+                    imageLink={'/images/thumbnails/steemit.com.jpg'}
+                />
+                <BategoryContentCard
                     contentName="IPFS"
                     urlLink="https://ipfs.io"
                     subtitle="A peer-to-peer hypermedia protocol to make the web faster, safer, and more open"
