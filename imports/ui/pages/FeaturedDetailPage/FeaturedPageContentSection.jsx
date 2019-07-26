@@ -14,13 +14,13 @@ const ContentSectionBackgroundWrapper = styled.div`
     padding: 0;
     margin: 0;
     /* 50% is at the (984px / 2) = 492 mark, so we need to add (718px - (984px / 2)) = 266px and 24px of padding = 290px*/
-    background: linear-gradient(90deg, #FFF calc(50% + 290px), #F2F2F2 50%);
+    background: linear-gradient(90deg, #fff calc(50% + 290px), #f2f2f2 50%);
 
-    @media(max-width: 1030px) {
+    @media (max-width: 1030px) {
         padding: 0 24px;
 
-        background: #FFF;
-    };
+        background: #fff;
+    }
 `;
 
 const ContentSectionWrapper = styled.div`
@@ -31,7 +31,6 @@ const ContentSectionWrapper = styled.div`
 `;
 
 const ContentSectionContainer = styled.div`
-
     /*    This is what this grid looks like:    */
     /*                                          */
     /*    |-------------[TITLE]-------------|   */
@@ -55,7 +54,7 @@ const ContentSectionContainer = styled.div`
     grid-column-gap: 0;
     grid-row-gap: 0;
 
-    @media(max-width: 1030px) {
+    @media (max-width: 1030px) {
         grid-template-columns: [content-start] auto [content-end];
         grid-template-rows: [title-start] auto [title-end body-start] auto [body-end credit-start] auto [credit-end];
     }
@@ -116,8 +115,8 @@ const FeaturedContentLinkButton = styled.a`
     height: 40px;
     width: 168px;
     border-radius: 10px;
-    background-color: #FFFFFF;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 
     text-decoration: none;
 
@@ -139,10 +138,10 @@ const FeaturedContentLinkButton = styled.a`
     justify-content: center;
 
     :hover {
-        box-shadow: 0 4px 6px 0 rgba(0,0,0,0.1);
-    };
+        box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+    }
 
-    @media(max-width: 1030px) {
+    @media (max-width: 1030px) {
         /* temporary solution to make button more visible on mobile */
         /* border: 2px solid #FE5677; */
 
@@ -154,7 +153,7 @@ const FeaturedContentLinkButton = styled.a`
         &:last-child {
             margin-top: 40px;
         }
-    };
+    }
 `;
 
 const FeaturedContentLinkButtonText = styled.p`
@@ -163,7 +162,7 @@ const FeaturedContentLinkButtonText = styled.p`
     font-weight: 800;
     font-style: normal;
 
-    color: #4A4A4A;
+    color: #4a4a4a;
 
     font-size: 16px;
     line-height: 20px;
@@ -196,7 +195,7 @@ export const FeaturedContentBodyParagraphLinkText = styled.a`
     font-weight: 800;
     font-style: normal;
 
-    color: #4A4A4A;
+    color: #4a4a4a;
 
     text-decoration: none;
 `;
@@ -216,7 +215,7 @@ export const FeaturedContentBodyImage = styled.div`
     position: relative;
 
     :before {
-        content: "";
+        content: '';
         /* 202px (width of grey column) - 84px (width of SVG image) = 118px offset */
         right: 119px;
         top: 0;
@@ -232,7 +231,7 @@ export const FeaturedContentBodyImage = styled.div`
     }
 
     :after {
-        content: "";
+        content: '';
         right: 119px;
         bottom: 0;
 
@@ -248,7 +247,7 @@ export const FeaturedContentBodyImage = styled.div`
         margin-bottom: -84px;
     }
 
-    @media(max-width: 1030px) {
+    @media (max-width: 1030px) {
         :before {
             display: none;
         }
@@ -308,7 +307,7 @@ const FeaturedContentAuthorName = styled.p`
     font-weight: 800;
     font-style: normal;
 
-    color: #FE5677;
+    color: #fe5677;
 
     font-size: 16px;
     line-height: 20px;
@@ -329,20 +328,26 @@ const FeaturedContentAuthorNameDate = styled.p`
     line-height: 20px;
 `;
 
-export default (props) => {
+export default props => {
     return (
         <>
             <ContentSectionBackgroundWrapper>
                 <ContentSectionWrapper>
                     <ContentSectionContainer>
-
                         <FeaturedContentTitleAndSubtitleContainer>
-                            <FeaturedContentTitle>{props.title}</FeaturedContentTitle>
-                            <FeaturedContentSubTitle>{props.subtitle}</FeaturedContentSubTitle>
+                            <FeaturedContentTitle>
+                                {props.title}
+                            </FeaturedContentTitle>
+                            <FeaturedContentSubTitle>
+                                {props.subtitle}
+                            </FeaturedContentSubTitle>
                         </FeaturedContentTitleAndSubtitleContainer>
 
                         <FeaturedContentBodyContainer>
-                            <FeaturedContentLinkButton target="_blank" href={props.link}>
+                            <FeaturedContentLinkButton
+                                target="_blank"
+                                href={props.link}
+                            >
                                 <FeaturedContentLinkButtonText>
                                     Visit site
                                 </FeaturedContentLinkButtonText>
@@ -351,39 +356,61 @@ export default (props) => {
                             {/* BEGINNING OF BODY CONTENT THAT CAN BE PULLED IN THROUGH CMS */}
 
                             <Switch>
-                                <Route path="/sky-folk"
-                                    render={props => <SkyFolkContent {...props} />} />
-                                <Route path="/internet-archive"
-                                    render={props => <InternetArchiveContent {...props} />} />
-                                <Route path="/indizr"
-                                    render={props => <IndizrContent {...props} />} />
-                                <Route path="/changelog"
-                                    render={props => <ChangelogContent {...props} />} />
+                                <Route
+                                    path="/sky-folk"
+                                    render={props => (
+                                        <SkyFolkContent {...props} />
+                                    )}
+                                />
+                                <Route
+                                    path="/internet-archive"
+                                    render={props => (
+                                        <InternetArchiveContent {...props} />
+                                    )}
+                                />
+                                <Route
+                                    path="/indizr"
+                                    render={props => (
+                                        <IndizrContent {...props} />
+                                    )}
+                                />
+                                <Route
+                                    path="/changelog"
+                                    render={props => (
+                                        <ChangelogContent {...props} />
+                                    )}
+                                />
                             </Switch>
 
                             {/* END OF BODY CONTENT THAT CAN BE PULLED IN THROUGH CMS */}
 
-                            <FeaturedContentLinkButton target="_blank" href={props.link}>
+                            <FeaturedContentLinkButton
+                                target="_blank"
+                                href={props.link}
+                            >
                                 <FeaturedContentLinkButtonText>
                                     Visit site
                                 </FeaturedContentLinkButtonText>
                             </FeaturedContentLinkButton>
-
                         </FeaturedContentBodyContainer>
 
                         <FeaturedContentCreditContainer>
                             <FeaturedContentBorderBox />
                             <FeaturedContentCreditTextContainer>
                                 <FeaturedContentAuthorNameBy>
-                                    By <FeaturedContentAuthorName>{props.author}</FeaturedContentAuthorName>
+                                    By{' '}
+                                    <FeaturedContentAuthorName>
+                                        {props.author}
+                                    </FeaturedContentAuthorName>
                                 </FeaturedContentAuthorNameBy>
-                                <FeaturedContentAuthorNameDate>{props.date}</FeaturedContentAuthorNameDate>
+                                <FeaturedContentAuthorNameDate>
+                                    {props.date}
+                                </FeaturedContentAuthorNameDate>
                             </FeaturedContentCreditTextContainer>
                         </FeaturedContentCreditContainer>
-
                     </ContentSectionContainer>
                 </ContentSectionWrapper>
             </ContentSectionBackgroundWrapper>
         </>
-    )
-}
+    );
+};

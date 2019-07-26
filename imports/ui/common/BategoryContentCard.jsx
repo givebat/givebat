@@ -5,7 +5,10 @@ import styled from 'styled-components';
 
 const BategoriesVisitLabelContainer = styled.div`
     display: grid;
-    grid-template-columns: minmax(min-content, max-content) minmax(min-content, max-content);
+    grid-template-columns: minmax(min-content, max-content) minmax(
+            min-content,
+            max-content
+        );
     align-items: start;
     padding: 0 0 24px 24px;
     margin: 0;
@@ -22,7 +25,7 @@ const BategoriesVisitLabel = styled.p`
 
     font-size: 16px;
     line-height: 20px;
-    color: #FF325A;
+    color: #ff325a;
 
     opacity: 0;
     margin: 0;
@@ -69,31 +72,32 @@ const BategoryCardContainerWrapper = styled.div`
 
     &:hover ${BategoriesVisitLabel} {
         opacity: 1;
-    };
+    }
 
     &:hover ${BategoriesVisitLabelIcon} {
         opacity: 1;
-    };
+    }
 
     @media (hover: none) {
         /* on devices that do not have a pointer, don't have hover effects */
-        :hover{
+        :hover {
             /* leaving it for now because it actually looks kind of nice when you tap through to another site and then come back */
             /* background: none; */
-        };
-    };
+        }
+    }
 
     @media (max-width: 768px) {
         max-height: 300px;
-    };
+    }
 `;
 
 const BategoryCardContainer = styled.a`
     width: 100%;
     height: 100%;
     border-radius: 48px;
-    background-color: #FFFFFF;
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1), 0 12px 16px 0 rgba(0,0,0,0.06);
+    background-color: #ffffff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1),
+        0 12px 16px 0 rgba(0, 0, 0, 0.06);
 
     text-decoration: none;
 
@@ -108,7 +112,7 @@ const BategoryCardContainer = styled.a`
 
     @media (max-width: 768px) {
         max-height: 300px;
-    };
+    }
 `;
 
 const BategoriesCardImage = styled.div`
@@ -157,7 +161,7 @@ const BategoriesCardTextTitle = styled.h3`
     font-size: 18px;
     line-height: 23px;
 
-    color: #9B9B9B;
+    color: #9b9b9b;
 
     text-decoration: none;
     padding: 24px 24px 4px 24px;
@@ -165,9 +169,9 @@ const BategoriesCardTextTitle = styled.h3`
 
     border-radius: 48px;
 
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
         hyphens: auto;
-    };
+    }
 `;
 
 const BategoriesCardTextBody = styled.p`
@@ -185,20 +189,16 @@ const BategoriesCardTextBody = styled.p`
     padding: 0 24px 4px 24px;
     margin: 0;
 
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
         hyphens: auto;
-    };
+    }
 `;
 
-export default (props) => {
+export default props => {
     return (
-        <BategoryCardContainerWrapper
-            key={props.contentName}>
-            <BategoryCardContainer
-                target="_blank"
-                href={props.urlLink}>
-                <BategoriesCardImage
-                    imgSrcName={props.imageLink} />
+        <BategoryCardContainerWrapper key={props.contentName}>
+            <BategoryCardContainer target="_blank" href={props.urlLink}>
+                <BategoriesCardImage imgSrcName={props.imageLink} />
 
                 <BategoriesCardTextContainer>
                     <BategoriesCardTextContentContainer>
@@ -210,16 +210,12 @@ export default (props) => {
                         </BategoriesCardTextBody>
                     </BategoriesCardTextContentContainer>
                     <BategoriesVisitLabelContainer>
-
-                        <BategoriesVisitLabel>
-                            Visit
-                        </BategoriesVisitLabel>
+                        <BategoriesVisitLabel>Visit</BategoriesVisitLabel>
 
                         <BategoriesVisitLabelIcon />
-
                     </BategoriesVisitLabelContainer>
                 </BategoriesCardTextContainer>
             </BategoryCardContainer>
         </BategoryCardContainerWrapper>
-    )
-}
+    );
+};
