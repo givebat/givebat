@@ -1,9 +1,9 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled, {css} from 'styled-components';
 
 // import logoImage from '../images/logo_text@2x.png';
 
-import { NavLink } from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 const TopbarContainer = styled.div`
     /* background-color: white; */
@@ -18,8 +18,8 @@ const TopbarContainer = styled.div`
     margin: auto;
 
     ${props =>
-        props.notch &&
-        css`
+  props.notch &&
+  css`
             background-color: rgba(255, 255, 255, 0.8);
             /* max-width: 1024px;
         margin-left: auto;
@@ -58,13 +58,13 @@ const LogoWordContainer = styled(NavLink)`
     justify-self: start;
 
     ${props =>
-        props.show &&
-        css`
+  props.show &&
+  css`
             visibility: hidden;
         `}
 `;
 
-const LogoWordImg = styled.img.attrs({ src: '/images/logo_text@2x.png' })`
+const LogoWordImg = styled.img.attrs({src: '/images/logo_text@2x.png'})`
     height: 100%;
     width: 100%;
 `;
@@ -85,14 +85,14 @@ const AboutLink = styled(NavLink)`
 `;
 
 export default props => {
-    return (
-        <TopbarContainer notch={props.notch}>
-            <TopbarContentContainer>
-                <LogoWordContainer to="/" show={props.show}>
-                    <LogoWordImg />
-                </LogoWordContainer>
-                <AboutLink to="/about">About</AboutLink>
-            </TopbarContentContainer>
-        </TopbarContainer>
-    );
+  return (
+    <TopbarContainer notch={props.notch}>
+      <TopbarContentContainer>
+        <LogoWordContainer to="/" show={props.show}>
+          <LogoWordImg/>
+        </LogoWordContainer>
+        <AboutLink to="/about">About</AboutLink>
+      </TopbarContentContainer>
+    </TopbarContainer>
+  );
 };

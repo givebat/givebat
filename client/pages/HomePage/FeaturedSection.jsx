@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import SectionLabel from '../../common/SectionLabel';
 import CollectionLabel from '../../common/CollectionLabel';
 
-import { NavLink } from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 const FeaturedContainer = styled.div`
     padding-top: 42px;
@@ -307,77 +307,76 @@ const CollectionCardTextBody = styled.p`
 `;
 
 export default () => {
-    return (
-        <FeaturedContainer>
-            <SectionLabel sectionName="FEATURED" featured />
+  return (
+    <FeaturedContainer>
+      <SectionLabel sectionName="FEATURED" featured/>
 
-            <FeaturedContentContainer>
-                <FeaturedCardContainerWrapper>
-                    <FeaturedCardContainer to="/changelog">
-                        <FeaturedCardImage imgSrcName="/images/featured/body_changelog_2.png" />
-                        <FeaturedCardTextContainer>
-                            <FeaturedCardTextTitle>
-                                Changelog
-                            </FeaturedCardTextTitle>
-                            <FeaturedCardTextBody>
-                                News and podcasts for developers
-                            </FeaturedCardTextBody>
-                        </FeaturedCardTextContainer>
-                        <FeaturedCardHoverEmoji>
-                            <span role="img" aria-labelledby="laptop emoji">
-                                💻
-                            </span>
-                        </FeaturedCardHoverEmoji>
-                    </FeaturedCardContainer>
-                </FeaturedCardContainerWrapper>
+      <FeaturedContentContainer>
+        <FeaturedCardContainerWrapper>
+          <FeaturedCardContainer to="/changelog">
+            <FeaturedCardImage
+              imgSrcName="/images/featured/body_changelog_2.png"/>
+            <FeaturedCardTextContainer>
+              <FeaturedCardTextTitle>
+                Changelog
+              </FeaturedCardTextTitle>
+              <FeaturedCardTextBody>
+                News and podcasts for developers
+              </FeaturedCardTextBody>
+            </FeaturedCardTextContainer>
+            <FeaturedCardHoverEmoji>
+              <span role="img" aria-labelledby="laptop emoji">
+                💻
+              </span>
+            </FeaturedCardHoverEmoji>
+          </FeaturedCardContainer>
+        </FeaturedCardContainerWrapper>
 
-                <FeaturedCardContainerWrapper>
-                    <FeaturedCardContainer to="/indizr">
-                        <FeaturedCardImage imgSrcName="/images/featured/hero_indizr2.jpg" />
-                        <FeaturedCardTextContainer>
-                            <FeaturedCardTextTitle>
-                                Indizr
-                            </FeaturedCardTextTitle>
-                            <FeaturedCardTextBody>
-                                Everything Web 3.0
-                            </FeaturedCardTextBody>
-                        </FeaturedCardTextContainer>
-                        <FeaturedCardHoverEmoji>
-                            <span role="img" aria-labelledby="web emoji">
-                                🕸
-                            </span>
-                        </FeaturedCardHoverEmoji>
-                    </FeaturedCardContainer>
-                </FeaturedCardContainerWrapper>
+        <FeaturedCardContainerWrapper>
+          <FeaturedCardContainer to="/indizr">
+            <FeaturedCardImage imgSrcName="/images/featured/hero_indizr2.jpg"/>
+            <FeaturedCardTextContainer>
+              <FeaturedCardTextTitle>
+                Indizr
+              </FeaturedCardTextTitle>
+              <FeaturedCardTextBody>
+                Everything Web 3.0
+              </FeaturedCardTextBody>
+            </FeaturedCardTextContainer>
+            <FeaturedCardHoverEmoji>
+              <span role="img" aria-labelledby="web emoji">
+                🕸
+              </span>
+            </FeaturedCardHoverEmoji>
+          </FeaturedCardContainer>
+        </FeaturedCardContainerWrapper>
 
-                <CollectionCardContainerWrapper>
-                    <CollectionCardContainer to="/crypto-companions">
-                        <CollectionCardImage imgSrcName="/images/collections/hero_crypto_companions.jpg" />
+        <CollectionCardContainerWrapper>
+          <CollectionCardContainer to="/crypto-companions">
+            <CollectionCardImage
+              imgSrcName="/images/collections/hero_crypto_companions.jpg"/>
 
-                        <CollectionCardTextContainer>
-                            <CollectionCardTitleContainer>
-                                <CollectionLabel labelName="COLLECTION" />
-                                <CollectionCardTextTitle>
-                                    Crypto Companions
-                                </CollectionCardTextTitle>
-                            </CollectionCardTitleContainer>
+            <CollectionCardTextContainer>
+              <CollectionCardTitleContainer>
+                <CollectionLabel labelName="COLLECTION"/>
+                <CollectionCardTextTitle>
+                  Crypto Companions
+                </CollectionCardTextTitle>
+              </CollectionCardTitleContainer>
 
-                            <CollectionCardTextBody>
-                                The brave crypto companies and creators driving
-                                the world of crypto forward
-                            </CollectionCardTextBody>
-                        </CollectionCardTextContainer>
-                        <CollectionCardHoverEmoji>
-                            <span
-                                role="img"
-                                aria-labelledby="money with wings emoji"
-                            >
-                                💸
-                            </span>
-                        </CollectionCardHoverEmoji>
-                    </CollectionCardContainer>
-                </CollectionCardContainerWrapper>
-            </FeaturedContentContainer>
-        </FeaturedContainer>
-    );
+              <CollectionCardTextBody>
+                The brave crypto companies and creators driving
+                the world of crypto forward
+              </CollectionCardTextBody>
+            </CollectionCardTextContainer>
+            <CollectionCardHoverEmoji>
+              <span role="img" aria-labelledby="money with wings emoji">
+                💸
+              </span>
+            </CollectionCardHoverEmoji>
+          </CollectionCardContainer>
+        </CollectionCardContainerWrapper>
+      </FeaturedContentContainer>
+    </FeaturedContainer>
+  );
 };

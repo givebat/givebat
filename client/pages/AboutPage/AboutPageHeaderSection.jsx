@@ -26,10 +26,10 @@ const HeroImage = styled.div`
 `;
 
 export default () => {
-    return (
-        <>
-            <Header notch />
-            <HeroImage imgSrc='/images/page-elements/header@3x.png' />
-        </>
-    )
+  return (
+    <>
+      <Header notch/>
+      <HeroImage imgSrc='/images/page-elements/header@3x.png'/>
+    </>
+  );
 }

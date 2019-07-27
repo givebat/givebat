@@ -4,13 +4,13 @@ import styled from 'styled-components';
 import BategoryContentCard from '../../common/BategoryContentCard';
 
 import {
-    Tabs as UnstyledTabs,
-    TabList as UnstyledTabList,
-    Tab as UnstyledTab,
-    TabPanel as UnstyledTabPanel,
+  Tabs as UnstyledTabs,
+  TabList as UnstyledTabList,
+  Tab as UnstyledTab,
+  TabPanel as UnstyledTabPanel,
 } from 'react-tabs';
 
-import { BategoriesData } from '../../../imports/fake-data/Data';
+import {BategoriesData} from '../../../imports/fake-data/Data';
 
 const BategoriesContainer = styled.div`
     /* or else it jumps weirdly when switching to a tab with a short list */
@@ -191,31 +191,31 @@ const BategoriesListEndIcon = styled.div`
 `;
 
 export default () => {
-    return (
-        <BategoriesContainer>
-            <BategoriesNavigationTopContainer>
-                <Tabs
-                    selectedTabClassName="is-selected"
-                    selectedTabPanelClassName="is-selected"
-                >
-                    {/* Loop through the top level navigation items 
+  return (
+    <BategoriesContainer>
+      <BategoriesNavigationTopContainer>
+        <Tabs
+          selectedTabClassName="is-selected"
+          selectedTabPanelClassName="is-selected"
+        >
+          {/* Loop through the top level navigation items
                         so we can populate the "Tabs" as top-level navigation items */}
-                    <BategoriesNavigationBackgroundContainer>
-                        <BategoriesNavigationOverlayContainer>
-                            <BategoriesNavigationOverlay />
-                            <TabList>
-                                {BategoriesData.map(allBategories => (
-                                    <Tab key={allBategories.bategoryName}>
-                                        <TabText>
-                                            {allBategories.bategoryName}
-                                        </TabText>
-                                    </Tab>
-                                ))}
-                            </TabList>
-                        </BategoriesNavigationOverlayContainer>
-                    </BategoriesNavigationBackgroundContainer>
+          <BategoriesNavigationBackgroundContainer>
+            <BategoriesNavigationOverlayContainer>
+              <BategoriesNavigationOverlay/>
+              <TabList>
+                {BategoriesData.map(allBategories => (
+                  <Tab key={allBategories.bategoryName}>
+                    <TabText>
+                      {allBategories.bategoryName}
+                    </TabText>
+                  </Tab>
+                ))}
+              </TabList>
+            </BategoriesNavigationOverlayContainer>
+          </BategoriesNavigationBackgroundContainer>
 
-                    {/* Loop through the top level navigation items again,
+          {/* Loop through the top level navigation items again,
                         but this time so we can make "panels" that match the "tabs"
 
                         The way react-tabs works is if you have tabs like this:
@@ -231,38 +231,38 @@ export default () => {
                         so we're looping through the same thing twice; once for
                         the navigation items, again for the panels */}
 
-                    {BategoriesData.map(allBategories => (
-                        <TabPanel key={allBategories.bategoryName}>
-                            {/* The actual content of [bategoryName] */}
-                            {/* Loop through this bategory so we can create a panel for each tab item */}
+          {BategoriesData.map(allBategories => (
+            <TabPanel key={allBategories.bategoryName}>
+              {/* The actual content of [bategoryName] */}
+              {/* Loop through this bategory so we can create a panel for each tab item */}
 
-                            {/* Now loop through this specific Sub Category's "featured content" array */}
-                            <BategoriesContentContainer>
-                                {allBategories.contentInBategory.map(
-                                    contentInBategory => (
-                                        <BategoryContentCard
-                                            key={contentInBategory.contentName}
-                                            urlLink={contentInBategory.urlLink}
-                                            imageLink={
-                                                contentInBategory.imageLink
-                                            }
-                                            contentName={
-                                                contentInBategory.contentName
-                                            }
-                                            subtitle={
-                                                contentInBategory.subtitle
-                                            }
-                                        />
-                                    )
-                                )}
-                                {/* <BategoriesListEndIconContainer>
+              {/* Now loop through this specific Sub Category's "featured content" array */}
+              <BategoriesContentContainer>
+                {allBategories.contentInBategory.map(
+                  contentInBategory => (
+                    <BategoryContentCard
+                      key={contentInBategory.contentName}
+                      urlLink={contentInBategory.urlLink}
+                      imageLink={
+                        contentInBategory.imageLink
+                      }
+                      contentName={
+                        contentInBategory.contentName
+                      }
+                      subtitle={
+                        contentInBategory.subtitle
+                      }
+                    />
+                  ),
+                )}
+                {/* <BategoriesListEndIconContainer>
                                     <BategoriesListEndIcon />
                                 </BategoriesListEndIconContainer> */}
-                            </BategoriesContentContainer>
-                        </TabPanel>
-                    ))}
-                </Tabs>
-            </BategoriesNavigationTopContainer>
-        </BategoriesContainer>
-    );
+              </BategoriesContentContainer>
+            </TabPanel>
+          ))}
+        </Tabs>
+      </BategoriesNavigationTopContainer>
+    </BategoriesContainer>
+  );
 };

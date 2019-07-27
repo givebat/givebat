@@ -3,8 +3,7 @@ import styled from 'styled-components';
 
 import CollectionLabel from '../../common/CollectionLabel';
 
-import { NavLink } from 'react-router-dom';
-
+import {NavLink} from 'react-router-dom';
 
 const FeaturedContainer = styled.div`
     padding-top: 68px;
@@ -316,77 +315,80 @@ const CollectionCardTextBody = styled.p`
 `;
 
 export default () => {
-    return (
-        <FeaturedContainer>
-            {/* <SectionLabel sectionName="FEATURED" featured /> */}
+  return (
+    <FeaturedContainer>
+      {/* <SectionLabel sectionName="FEATURED" featured /> */}
 
-            <FeaturedContentContainer>
-                <FeaturedCardContainerWrapper>
-                    <FeaturedCardContainer to="/sky-folk">
-                        <FeaturedCardImage imgSrcName="/images/featured/hero_theskyfolk.jpg" />
-                        <FeaturedCardTextContainer>
-                            <FeaturedCardTextTitle>
-                                SKÝ FÓLK
-                            </FeaturedCardTextTitle>
-                            <FeaturedCardTextBody>
-                                Stunning landscape photography and films
-                            </FeaturedCardTextBody>
-                        </FeaturedCardTextContainer>
-                        <FeaturedCardHoverEmoji>
-                            <span role="img" aria-labelledby="desert emoji">
-                                🏜️
-                            </span>
-                        </FeaturedCardHoverEmoji>
-                    </FeaturedCardContainer>
-                </FeaturedCardContainerWrapper>
+      <FeaturedContentContainer>
+        <FeaturedCardContainerWrapper>
+          <FeaturedCardContainer to="/sky-folk">
+            <FeaturedCardImage
+              imgSrcName="/images/featured/hero_theskyfolk.jpg"/>
+            <FeaturedCardTextContainer>
+              <FeaturedCardTextTitle>
+                SKÝ FÓLK
+              </FeaturedCardTextTitle>
+              <FeaturedCardTextBody>
+                Stunning landscape photography and films
+              </FeaturedCardTextBody>
+            </FeaturedCardTextContainer>
+            <FeaturedCardHoverEmoji>
+              <span role="img" aria-labelledby="desert emoji">
+                🏜️
+              </span>
+            </FeaturedCardHoverEmoji>
+          </FeaturedCardContainer>
+        </FeaturedCardContainerWrapper>
 
-                <FeaturedCardContainerWrapper>
-                    <FeaturedCardContainer to="/internet-archive">
-                        <FeaturedCardImage imgSrcName="/images/featured/hero_internetarchive.gif" />
-                        <FeaturedCardTextContainer>
-                            <FeaturedCardTextTitle>
-                                Internet Archive
-                            </FeaturedCardTextTitle>
-                            <FeaturedCardTextBody>
-                                The world's largest library
-                            </FeaturedCardTextBody>
-                        </FeaturedCardTextContainer>
-                        <FeaturedCardHoverEmoji>
-                            <span
-                                role="img"
-                                aria-labelledby="classical building emoji"
-                            >
-                                🏛️
-                            </span>
-                        </FeaturedCardHoverEmoji>
-                    </FeaturedCardContainer>
-                </FeaturedCardContainerWrapper>
+        <FeaturedCardContainerWrapper>
+          <FeaturedCardContainer to="/internet-archive">
+            <FeaturedCardImage
+              imgSrcName="/images/featured/hero_internetarchive.gif"/>
+            <FeaturedCardTextContainer>
+              <FeaturedCardTextTitle>
+                Internet Archive
+              </FeaturedCardTextTitle>
+              <FeaturedCardTextBody>
+                The world's largest library
+              </FeaturedCardTextBody>
+            </FeaturedCardTextContainer>
+            <FeaturedCardHoverEmoji>
+              <span
+                role="img"
+                aria-labelledby="classical building emoji"
+              >
+                🏛
+              </span>
+            </FeaturedCardHoverEmoji>
+          </FeaturedCardContainer>
+        </FeaturedCardContainerWrapper>
 
-                <CollectionCardContainerWrapper>
-                    <CollectionCardContainer to="/friends-of-brave">
-                        <CollectionCardImage imgSrcName="/images/collections/tn_friends_of_brave.jpg" />
+        <CollectionCardContainerWrapper>
+          <CollectionCardContainer to="/friends-of-brave">
+            <CollectionCardImage
+              imgSrcName="/images/collections/tn_friends_of_brave.jpg"/>
 
-                        <CollectionCardTextContainer>
-                            <CollectionCardTitleContainer>
-                                <CollectionLabel labelName="COLLECTION" />
-                                <CollectionCardTextTitle>
-                                    Friends of Brave
-                                </CollectionCardTextTitle>
-                            </CollectionCardTitleContainer>
+            <CollectionCardTextContainer>
+              <CollectionCardTitleContainer>
+                <CollectionLabel labelName="COLLECTION"/>
+                <CollectionCardTextTitle>
+                  Friends of Brave
+                </CollectionCardTextTitle>
+              </CollectionCardTitleContainer>
 
-                            <CollectionCardTextBody>
-                                The creators, enthusiasts, and companies who are
-                                helping bring Brave's vision to life
-                            </CollectionCardTextBody>
-                        </CollectionCardTextContainer>
-                        <CollectionCardHoverEmoji>
-                            <span role="img" aria-labelledby="lion emoji">
-                                🦁
-                            </span>
-                        </CollectionCardHoverEmoji>
-                    </CollectionCardContainer>
-                </CollectionCardContainerWrapper>
-            </FeaturedContentContainer>
-        </FeaturedContainer>
-    );
+              <CollectionCardTextBody>
+                The creators, enthusiasts, and companies who are
+                helping bring Brave's vision to life
+              </CollectionCardTextBody>
+            </CollectionCardTextContainer>
+            <CollectionCardHoverEmoji>
+              <span role="img" aria-labelledby="lion emoji">
+                🦁
+              </span>
+            </CollectionCardHoverEmoji>
+          </CollectionCardContainer>
+        </CollectionCardContainerWrapper>
+      </FeaturedContentContainer>
+    </FeaturedContainer>
+  );
 };

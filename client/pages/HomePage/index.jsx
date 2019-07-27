@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Helmet } from 'react-helmet';
+import {Helmet} from 'react-helmet';
 
 import HeaderSection from './HeaderSection';
 import FeaturedSection from './FeaturedSection';
@@ -42,22 +42,22 @@ const GradientContainerBottom = styled.div`
 `;
 
 export default () => {
-    return (
-        <>
-            <Helmet>
-                <title>givebat</title>
-            </Helmet>
+  return (
+    <>
+      <Helmet>
+        <title>givebat</title>
+      </Helmet>
 
-            <GradientContainerTop />
-            <HeaderSection />
-            <ContentSectionContainer>
-                <FeaturedSection />
+      <GradientContainerTop/>
+      <HeaderSection/>
+      <ContentSectionContainer>
+        <FeaturedSection/>
 
-                <BategoriesSection />
+        <BategoriesSection/>
 
-                <FeaturedSectionOverflow />
-            </ContentSectionContainer>
-            <GradientContainerBottom />
-        </>
-    );
+        <FeaturedSectionOverflow/>
+      </ContentSectionContainer>
+      <GradientContainerBottom/>
+    </>
+  );
 };

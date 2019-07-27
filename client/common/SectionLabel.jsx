@@ -24,9 +24,9 @@ const SectionLabelContainer = styled.div`
 `;
 
 export default props => {
-    return (
-        <SectionLabelContainer>
-            <SectionLabel>{props.sectionName}</SectionLabel>
-        </SectionLabelContainer>
-    );
+  return (
+    <SectionLabelContainer>
+      <SectionLabel>{props.sectionName}</SectionLabel>
+    </SectionLabelContainer>
+  );
 };

@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Route, Switch } from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 
 import SkyFolkContent from './FeaturedPageContent/SkyFolkContent';
-import InternetArchiveContent from './FeaturedPageContent/InternetArchiveContent';
+import InternetArchiveContent
+  from './FeaturedPageContent/InternetArchiveContent';
 import IndizrContent from './FeaturedPageContent/IndizrContent';
 import ChangelogContent from './FeaturedPageContent/ChangelogContent';
 
@@ -329,88 +330,88 @@ const FeaturedContentAuthorNameDate = styled.p`
 `;
 
 export default props => {
-    return (
-        <>
-            <ContentSectionBackgroundWrapper>
-                <ContentSectionWrapper>
-                    <ContentSectionContainer>
-                        <FeaturedContentTitleAndSubtitleContainer>
-                            <FeaturedContentTitle>
-                                {props.title}
-                            </FeaturedContentTitle>
-                            <FeaturedContentSubTitle>
-                                {props.subtitle}
-                            </FeaturedContentSubTitle>
-                        </FeaturedContentTitleAndSubtitleContainer>
+  return (
+    <>
+      <ContentSectionBackgroundWrapper>
+        <ContentSectionWrapper>
+          <ContentSectionContainer>
+            <FeaturedContentTitleAndSubtitleContainer>
+              <FeaturedContentTitle>
+                {props.title}
+              </FeaturedContentTitle>
+              <FeaturedContentSubTitle>
+                {props.subtitle}
+              </FeaturedContentSubTitle>
+            </FeaturedContentTitleAndSubtitleContainer>
 
-                        <FeaturedContentBodyContainer>
-                            <FeaturedContentLinkButton
-                                target="_blank"
-                                href={props.link}
-                            >
-                                <FeaturedContentLinkButtonText>
-                                    Visit site
-                                </FeaturedContentLinkButtonText>
-                            </FeaturedContentLinkButton>
+            <FeaturedContentBodyContainer>
+              <FeaturedContentLinkButton
+                target="_blank"
+                href={props.link}
+              >
+                <FeaturedContentLinkButtonText>
+                  Visit site
+                </FeaturedContentLinkButtonText>
+              </FeaturedContentLinkButton>
 
-                            {/* BEGINNING OF BODY CONTENT THAT CAN BE PULLED IN THROUGH CMS */}
+              {/* BEGINNING OF BODY CONTENT THAT CAN BE PULLED IN THROUGH CMS */}
 
-                            <Switch>
-                                <Route
-                                    path="/sky-folk"
-                                    render={props => (
-                                        <SkyFolkContent {...props} />
-                                    )}
-                                />
-                                <Route
-                                    path="/internet-archive"
-                                    render={props => (
-                                        <InternetArchiveContent {...props} />
-                                    )}
-                                />
-                                <Route
-                                    path="/indizr"
-                                    render={props => (
-                                        <IndizrContent {...props} />
-                                    )}
-                                />
-                                <Route
-                                    path="/changelog"
-                                    render={props => (
-                                        <ChangelogContent {...props} />
-                                    )}
-                                />
-                            </Switch>
+              <Switch>
+                <Route
+                  path="/sky-folk"
+                  render={props => (
+                    <SkyFolkContent {...props} />
+                  )}
+                />
+                <Route
+                  path="/internet-archive"
+                  render={props => (
+                    <InternetArchiveContent {...props} />
+                  )}
+                />
+                <Route
+                  path="/indizr"
+                  render={props => (
+                    <IndizrContent {...props} />
+                  )}
+                />
+                <Route
+                  path="/changelog"
+                  render={props => (
+                    <ChangelogContent {...props} />
+                  )}
+                />
+              </Switch>
 
-                            {/* END OF BODY CONTENT THAT CAN BE PULLED IN THROUGH CMS */}
+              {/* END OF BODY CONTENT THAT CAN BE PULLED IN THROUGH CMS */}
 
-                            <FeaturedContentLinkButton
-                                target="_blank"
-                                href={props.link}
-                            >
-                                <FeaturedContentLinkButtonText>
-                                    Visit site
-                                </FeaturedContentLinkButtonText>
-                            </FeaturedContentLinkButton>
-                        </FeaturedContentBodyContainer>
+              <FeaturedContentLinkButton
+                target="_blank"
+                href={props.link}
+              >
+                <FeaturedContentLinkButtonText>
+                  Visit site
+                </FeaturedContentLinkButtonText>
+              </FeaturedContentLinkButton>
+            </FeaturedContentBodyContainer>
 
-                        <FeaturedContentCreditContainer>
-                            <FeaturedContentBorderBox />
-                            <FeaturedContentCreditTextContainer>
-                                <FeaturedContentAuthorNameBy>
-                                    By{' '}
-                                    <FeaturedContentAuthorName>
-                                        {props.author}
-                                    </FeaturedContentAuthorName>
-                                </FeaturedContentAuthorNameBy>
-                                <FeaturedContentAuthorNameDate>
-                                    {props.date}
-                                </FeaturedContentAuthorNameDate>
-                            </FeaturedContentCreditTextContainer>
-                        </FeaturedContentCreditContainer>
-                    </ContentSectionContainer>
-                </ContentSectionWrapper>
-            </ContentSectionBackgroundWrapper>
-        </>
-    );
+            <FeaturedContentCreditContainer>
+              <FeaturedContentBorderBox/>
+              <FeaturedContentCreditTextContainer>
+                <FeaturedContentAuthorNameBy>
+                  By{' '}
+                  <FeaturedContentAuthorName>
+                    {props.author}
+                  </FeaturedContentAuthorName>
+                </FeaturedContentAuthorNameBy>
+                <FeaturedContentAuthorNameDate>
+                  {props.date}
+                </FeaturedContentAuthorNameDate>
+              </FeaturedContentCreditTextContainer>
+            </FeaturedContentCreditContainer>
+          </ContentSectionContainer>
+        </ContentSectionWrapper>
+      </ContentSectionBackgroundWrapper>
+    </>
+  );
 };

@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import React, { Fragment } from 'react';
+import React, {Fragment} from 'react';
 
 import Header from '../../common/Header';
 
-import { NavLink } from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 const Container = styled.div`
     min-height: 182px;
@@ -49,16 +49,16 @@ const LogoWordMark = styled(NavLink)`
 `;
 
 export default () => {
-    return (
-        <Fragment>
-            <Header show={'false'} />
-            <Container>
-                <ContentContainer>
-                    <LogoWordMarkContainer>
-                        <LogoWordMark to="/" />
-                    </LogoWordMarkContainer>
-                </ContentContainer>
-            </Container>
-        </Fragment>
-    );
+  return (
+    <Fragment>
+      <Header show={'false'}/>
+      <Container>
+        <ContentContainer>
+          <LogoWordMarkContainer>
+            <LogoWordMark to="/"/>
+          </LogoWordMarkContainer>
+        </ContentContainer>
+      </Container>
+    </Fragment>
+  );
 };

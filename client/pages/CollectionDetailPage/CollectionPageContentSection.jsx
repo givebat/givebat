@@ -1,14 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Route, Switch } from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 
 // import FunCornerGreySvg from '../../images/page-elements/funcornergrey.svg';
 
 import CollectionLabel from '../../common/CollectionLabel';
 
-import FriendsOfBraveContent from './CollectionPageContent/FriendsOfBraveContent';
-import CryptoCompanionsContent from './CollectionPageContent/CryptoCompanionsContent';
+import FriendsOfBraveContent
+  from './CollectionPageContent/FriendsOfBraveContent';
+import CryptoCompanionsContent
+  from './CollectionPageContent/CryptoCompanionsContent';
 
 const ContentSectionBackgroundWrapper = styled.div`
     padding: 0;
@@ -29,7 +31,6 @@ const ContentSectionWrapper = styled.div`
     margin: 0 auto;
     min-height: calc(100vh - 464px);
 `;
-
 
 const ContentSectionContainer = styled.div`
 
@@ -260,40 +261,41 @@ const CollectionAuthorNameDate = styled.p`
 `;
 
 export default (props) => {
-    return (
-        <>
-            <ContentSectionBackgroundWrapper>
-                <ContentSectionWrapper>
-                    <ContentSectionContainer>
-                        <CollectionTitleContainer>
-                            <CollectionLabel labelName="COLLECTION" />
-                            <CollectionTitle>{props.title}</CollectionTitle>
-                        </CollectionTitleContainer>
+  return (
+    <>
+      <ContentSectionBackgroundWrapper>
+        <ContentSectionWrapper>
+          <ContentSectionContainer>
+            <CollectionTitleContainer>
+              <CollectionLabel labelName="COLLECTION"/>
+              <CollectionTitle>{props.title}</CollectionTitle>
+            </CollectionTitleContainer>
 
-                        <CollectionBodyContainer>
+            <CollectionBodyContainer>
 
-                            <Switch>
-                                <Route path="/friends-of-brave"
-                                    render={props => <FriendsOfBraveContent {...props} />} />
-                                <Route path="/crypto-companions"
-                                    render={props => <CryptoCompanionsContent {...props} />} />
-                            </Switch>
+              <Switch>
+                <Route path="/friends-of-brave"
+                       render={props => <FriendsOfBraveContent {...props} />}/>
+                <Route path="/crypto-companions"
+                       render={props =>
+                         <CryptoCompanionsContent {...props} />}/>
+              </Switch>
 
-                        </CollectionBodyContainer>
+            </CollectionBodyContainer>
 
-                        <CollectionCreditContainer>
-                            <CollectionBorderBox />
-                            <CollectionCreditTextContainer>
-                                <CollectionAuthorNameBy>
-                                    By <CollectionAuthorName>{props.author}</CollectionAuthorName>
-                                </CollectionAuthorNameBy>
-                                <CollectionAuthorNameDate>{props.date}</CollectionAuthorNameDate>
-                            </CollectionCreditTextContainer>
-                        </CollectionCreditContainer>
+            <CollectionCreditContainer>
+              <CollectionBorderBox/>
+              <CollectionCreditTextContainer>
+                <CollectionAuthorNameBy>
+                  By <CollectionAuthorName>{props.author}</CollectionAuthorName>
+                </CollectionAuthorNameBy>
+                <CollectionAuthorNameDate>{props.date}</CollectionAuthorNameDate>
+              </CollectionCreditTextContainer>
+            </CollectionCreditContainer>
 
-                    </ContentSectionContainer>
-                </ContentSectionWrapper>
-            </ContentSectionBackgroundWrapper>
-        </>
-    )
+          </ContentSectionContainer>
+        </ContentSectionWrapper>
+      </ContentSectionBackgroundWrapper>
+    </>
+  );
 }

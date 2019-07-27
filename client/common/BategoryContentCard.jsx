@@ -195,27 +195,27 @@ const BategoriesCardTextBody = styled.p`
 `;
 
 export default props => {
-    return (
-        <BategoryCardContainerWrapper key={props.contentName}>
-            <BategoryCardContainer target="_blank" href={props.urlLink}>
-                <BategoriesCardImage imgSrcName={props.imageLink} />
+  return (
+    <BategoryCardContainerWrapper key={props.contentName}>
+      <BategoryCardContainer target="_blank" href={props.urlLink}>
+        <BategoriesCardImage imgSrcName={props.imageLink}/>
 
-                <BategoriesCardTextContainer>
-                    <BategoriesCardTextContentContainer>
-                        <BategoriesCardTextTitle>
-                            {props.contentName}
-                        </BategoriesCardTextTitle>
-                        <BategoriesCardTextBody>
-                            {props.subtitle}
-                        </BategoriesCardTextBody>
-                    </BategoriesCardTextContentContainer>
-                    <BategoriesVisitLabelContainer>
-                        <BategoriesVisitLabel>Visit</BategoriesVisitLabel>
+        <BategoriesCardTextContainer>
+          <BategoriesCardTextContentContainer>
+            <BategoriesCardTextTitle>
+              {props.contentName}
+            </BategoriesCardTextTitle>
+            <BategoriesCardTextBody>
+              {props.subtitle}
+            </BategoriesCardTextBody>
+          </BategoriesCardTextContentContainer>
+          <BategoriesVisitLabelContainer>
+            <BategoriesVisitLabel>Visit</BategoriesVisitLabel>
 
-                        <BategoriesVisitLabelIcon />
-                    </BategoriesVisitLabelContainer>
-                </BategoriesCardTextContainer>
-            </BategoryCardContainer>
-        </BategoryCardContainerWrapper>
-    );
+            <BategoriesVisitLabelIcon/>
+          </BategoriesVisitLabelContainer>
+        </BategoriesCardTextContainer>
+      </BategoryCardContainer>
+    </BategoryCardContainerWrapper>
+  );
 };

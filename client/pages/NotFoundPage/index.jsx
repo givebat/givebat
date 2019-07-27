@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import {Helmet} from 'react-helmet';
 
 import Header from '../../common/Header';
 
@@ -51,34 +51,34 @@ const Link = styled.a`
 `;
 
 export default () => {
-    const title = "givebat — 404";
-    const description = "givebat.com is a curated look at the best of the new web. We're shining a spotlight on the web's trailblazers.";
-    return (
-        <>
-            <Helmet>
-                <title>{title}</title>
-                <meta name="description" content={description}/>
+  const title = 'givebat — 404';
+  const description = 'givebat.com is a curated look at the best of the new web. We\'re shining a spotlight on the web\'s trailblazers.';
+  return (
+    <>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description}/>
 
-                <meta property="og:title" content={title} />
-                <meta property="og:description" content={description}/>
-            </Helmet>
+        <meta property="og:title" content={title}/>
+        <meta property="og:description" content={description}/>
+      </Helmet>
 
-            <Header />
+      <Header/>
 
-            <NotFoundDiv>
-                <NotFoundHeader>
-                    404
-                </NotFoundHeader>
-                <NotFoundText>
-                    Sorry, this page doesn't exist.
-                </NotFoundText>
-                <NotFoundText>
-                    Our bad.
-                </NotFoundText>
-                <NotFoundText>
-                    You can go back to the home page <Link href="/">here</Link>.
-                </NotFoundText>
-            </NotFoundDiv>
-        </>
-    )
+      <NotFoundDiv>
+        <NotFoundHeader>
+          404
+        </NotFoundHeader>
+        <NotFoundText>
+          Sorry, this page doesn't exist.
+        </NotFoundText>
+        <NotFoundText>
+          Our bad.
+        </NotFoundText>
+        <NotFoundText>
+          You can go back to the home page <Link href="/">here</Link>.
+        </NotFoundText>
+      </NotFoundDiv>
+    </>
+  );
 }

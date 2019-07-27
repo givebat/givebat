@@ -20,10 +20,10 @@ const HeroImage = styled.div`
 `;
 
 export default (props) => {
-    return (
-        <>
-            <Header notch></Header>
-            <HeroImage imgSrc={props.heroImage} />
-        </>
-    )
+  return (
+    <>
+      <Header notch></Header>
+      <HeroImage imgSrc={props.heroImage}/>
+    </>
+  );
 }

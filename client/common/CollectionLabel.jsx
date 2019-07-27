@@ -18,9 +18,9 @@ const CollectionLabel = styled.p`
 `;
 
 export default (props) => {
-    return (
-        <CollectionLabel>
-            {props.labelName}
-        </CollectionLabel>
-    )
+  return (
+    <CollectionLabel>
+      {props.labelName}
+    </CollectionLabel>
+  );
 }

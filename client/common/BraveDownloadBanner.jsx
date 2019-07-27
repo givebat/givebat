@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 
 // import BraveLogo from '../images/page-elements/brave_lion.svg';
@@ -200,51 +200,51 @@ const DownloadBraveNoThanksText = styled.p`
 var agent = navigator.userAgent.toLowerCase();
 var isChrome = /chrome|crios/.test(agent) && !/edge|opr\//.test(agent);
 var isBrave =
-    isChrome &&
-    window.navigator.plugins.length === 0 &&
-    window.navigator.mimeTypes.length === 0;
+  isChrome &&
+  window.navigator.plugins.length === 0 &&
+  window.navigator.mimeTypes.length === 0;
 
 export default () => {
-    const [noThankYou, setNoThankYou] = useState(false);
+  const [noThankYou, setNoThankYou] = useState(false);
 
-    if (!noThankYou && !isBrave) {
-        return (
-            <DownloadBraveBannerWrapper>
-                <DownloadBraveBannerContentWrapper>
-                    <DownloadBraveBannerContentContainer>
-                        <DownloadBraveLogo />
-                        <DownloadBraveBannerInfoContainer>
-                            <DownloadBraveBannerHeader>
-                                Brave: Experience the future of the web
-                            </DownloadBraveBannerHeader>
-                            <DownloadBraveBannerBody>
-                                Up to 8x faster than Chrome • Blocks ads and
-                                trackers • Supports Chrome Extensions
-                            </DownloadBraveBannerBody>
-                        </DownloadBraveBannerInfoContainer>
-                        <DownloadBraveBannerButtonContainer>
-                            <DownloadBraveOkayButton
-                                onClick={() => setNoThankYou(true)}
-                                target="_blank"
-                                href="https://brave.com/giv892"
-                            >
-                                <DownloadBraveOkayText>
-                                    Okay
-                                </DownloadBraveOkayText>
-                            </DownloadBraveOkayButton>
+  if (!noThankYou && !isBrave) {
+    return (
+      <DownloadBraveBannerWrapper>
+        <DownloadBraveBannerContentWrapper>
+          <DownloadBraveBannerContentContainer>
+            <DownloadBraveLogo/>
+            <DownloadBraveBannerInfoContainer>
+              <DownloadBraveBannerHeader>
+                Brave: Experience the future of the web
+              </DownloadBraveBannerHeader>
+              <DownloadBraveBannerBody>
+                Up to 8x faster than Chrome • Blocks ads and
+                trackers • Supports Chrome Extensions
+              </DownloadBraveBannerBody>
+            </DownloadBraveBannerInfoContainer>
+            <DownloadBraveBannerButtonContainer>
+              <DownloadBraveOkayButton
+                onClick={() => setNoThankYou(true)}
+                target="_blank"
+                href="https://brave.com/giv892"
+              >
+                <DownloadBraveOkayText>
+                  Okay
+                </DownloadBraveOkayText>
+              </DownloadBraveOkayButton>
 
-                            {/* <DownloadBraveNoThanksButton onClick={() => setNoThankYou(true)}> */}
-                            <DownloadBraveNoThanksText
-                                onClick={() => setNoThankYou(true)}
-                            >
-                                Not now
-                            </DownloadBraveNoThanksText>
-                            {/* </DownloadBraveNoThanksButton> */}
-                        </DownloadBraveBannerButtonContainer>
-                    </DownloadBraveBannerContentContainer>
-                </DownloadBraveBannerContentWrapper>
-            </DownloadBraveBannerWrapper>
-        );
-    }
-    return <></>;
+              {/* <DownloadBraveNoThanksButton onClick={() => setNoThankYou(true)}> */}
+              <DownloadBraveNoThanksText
+                onClick={() => setNoThankYou(true)}
+              >
+                Not now
+              </DownloadBraveNoThanksText>
+              {/* </DownloadBraveNoThanksButton> */}
+            </DownloadBraveBannerButtonContainer>
+          </DownloadBraveBannerContentContainer>
+        </DownloadBraveBannerContentWrapper>
+      </DownloadBraveBannerWrapper>
+    );
+  }
+  return <></>;
 };
