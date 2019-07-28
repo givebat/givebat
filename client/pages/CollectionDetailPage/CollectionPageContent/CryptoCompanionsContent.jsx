@@ -245,16 +245,16 @@ export default () => {
           imageLink={'/images/thumbnails/peepeth.com.jpg'}
         />
         <BategoryContentCard
-          contentName="Gods Unchained"
-          urlLink="https://godsunchained.com"
-          subtitle="A competitive trading card game powered by the Ethereum blockchain"
-          imageLink={'/images/thumbnails/godsunchained.com.jpg'}
-        />
-        <BategoryContentCard
           contentName="Publish0x"
           urlLink="https://www.publish0x.com"
           subtitle="Earn crypto for publishing and consuming quality content"
           imageLink={'/images/thumbnails/publish0x.com.jpg'}
+        />
+        <BategoryContentCard
+          contentName="Gods Unchained"
+          urlLink="https://godsunchained.com"
+          subtitle="A competitive trading card game powered by the Ethereum blockchain"
+          imageLink={'/images/thumbnails/godsunchained.com.jpg'}
         />
         <BategoryContentCard
           contentName="Altcoin Fantasy"
@@ -269,16 +269,16 @@ export default () => {
           imageLink={'/images/thumbnails/cointiply.com.jpg'}
         />
         <BategoryContentCard
-          contentName="Hodlr.Rocks"
-          urlLink="https://hodlr.rocks"
-          subtitle="Laser cut bitcoin & crypto art for hodlrs"
-          imageLink={'/images/thumbnails/hodlr.rocks.jpg'}
-        />
-        <BategoryContentCard
           contentName="CoinDreams"
           urlLink="https://coindreams.io"
           subtitle="Airdrop, giveaway & blockchain project tracker"
           imageLink={'/images/thumbnails/coindreams.io.jpg'}
+        />
+        <BategoryContentCard
+          contentName="Hodlr.Rocks"
+          urlLink="https://hodlr.rocks"
+          subtitle="Laser cut bitcoin & crypto art for hodlrs"
+          imageLink={'/images/thumbnails/hodlr.rocks.jpg'}
         />
       </CollectionCardContainer>
 
