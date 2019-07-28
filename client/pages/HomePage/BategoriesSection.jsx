@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+// import scrollToComponent from 'react-scroll-to-component';
+// import {useRef} from 'react';
 
 import BategoryContentCard from '../../common/BategoryContentCard';
 
@@ -190,9 +192,18 @@ const BategoriesListEndIcon = styled.div`
     align-self: center;
 `;
 
+// const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
+// TODO: Fix this and related commented out lines.
+// It sort of works but weirdly jumps to the bottom sometimes.
+
 export default () => {
+//   const myRef = useRef(null);
+
+//   const executeScroll = () => scrollToRef(myRef);
   return (
-    <BategoriesContainer>
+    <BategoriesContainer
+        // ref={myRef}
+        >
       <BategoriesNavigationTopContainer>
         <Tabs
           selectedTabClassName="is-selected"
@@ -205,7 +216,9 @@ export default () => {
               <BategoriesNavigationOverlay/>
               <TabList>
                 {BategoriesData.map(allBategories => (
-                  <Tab key={allBategories.bategoryName}>
+                  <Tab
+                    // onClick={executeScroll}
+                    key={allBategories.bategoryName}>
                     <TabText>
                       {allBategories.bategoryName}
                     </TabText>

@@ -482,21 +482,6 @@ export default () => {
                   </AboutTeamMemberRole>
                 </AboutTeamMemberInfoContainer>
               </AboutTeamMemberContainer>
-
-              {/* Felix */}
-              <AboutTeamMemberContainer target="_blank"
-                                        href="https://www.linkedin.com/in/felix-h-b38ab9122/">
-                <AboutTeamMemberPhoto imgSrc={'/images/about/felix.jpeg'}/>
-
-                <AboutTeamMemberInfoContainer>
-                  <AboutTeamMemberName>
-                    Felix Han
-                  </AboutTeamMemberName>
-                  <AboutTeamMemberRole>
-                    Backend
-                  </AboutTeamMemberRole>
-                </AboutTeamMemberInfoContainer>
-              </AboutTeamMemberContainer>
             </AboutTeamContainer>
           </AboutSection>
 

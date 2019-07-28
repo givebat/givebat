@@ -38,12 +38,12 @@ export default () => {
         latest industry trends and information.
       </FeaturedContentBodyParagraph>
       <FeaturedContentBodyParagraph>
-        There are{' '}
+        The Changelog team{' '}
         <FeaturedContentBodyParagraphLinkText
           target="_blank"
           href="https://changelog.com/podcasts"
         >
-          Changelog podcasts
+          produces podcasts
         </FeaturedContentBodyParagraphLinkText>{' '}
         about everything from{' '}
         <FeaturedContentBodyParagraphLinkText
@@ -77,7 +77,7 @@ export default () => {
 
       <FeaturedContentBodyParagraph>
         (Many episodes also have an elegantly displayed transcription
-        underneath them, if you'd prefer reading over listening.)
+        underneath them, if you prefer reading over listening.)
       </FeaturedContentBodyParagraph>
 
       <FeaturedContentBodyParagraph>
@@ -112,8 +112,7 @@ export default () => {
         >
           how Brian’s journey with Brave started with a Twitter DM
         </FeaturedContentBodyParagraphLinkText>
-        . (And if you’d prefer to read it, there’s even a beautifully
-        laid out transcript at the bottom of that page!)
+        .
       </FeaturedContentBodyParagraph>
 
       <FeaturedContentBodyParagraph>
