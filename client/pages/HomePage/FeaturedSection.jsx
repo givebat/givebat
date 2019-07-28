@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import SectionLabel from '../../common/SectionLabel';
 import CollectionLabel from '../../common/CollectionLabel';
 
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const FeaturedContainer = styled.div`
     padding-top: 42px;
@@ -15,7 +15,7 @@ const FeaturedContainer = styled.div`
     }
 `;
 
-const FeaturedContentContainer = styled.div`
+export const FeaturedContentContainer = styled.div`
     max-width: 984px;
 
     margin-left: auto;
@@ -34,7 +34,7 @@ const FeaturedContentContainer = styled.div`
     }
 `;
 
-const FeaturedCardHoverEmoji = styled.p`
+export const FeaturedCardHoverEmoji = styled.p`
     font-size: 88px;
     margin: 0;
 
@@ -47,7 +47,7 @@ const FeaturedCardHoverEmoji = styled.p`
     position: absolute;
 `;
 
-const FeaturedCardContainerWrapper = styled.div`
+export const FeaturedCardContainerWrapper = styled.div`
     padding: 4px;
     min-height: 400px;
     max-width: 472px;
@@ -70,7 +70,7 @@ const FeaturedCardContainerWrapper = styled.div`
     }
 `;
 
-const FeaturedCardContainer = styled(NavLink)`
+export const FeaturedCardContainer = styled(NavLink)`
     border-radius: 48px;
     background-color: #ffffff;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1),
@@ -103,7 +103,7 @@ const FeaturedCardContainer = styled(NavLink)`
     }
 `;
 
-const FeaturedCardImage = styled.div`
+export const FeaturedCardImage = styled.div`
     border-radius: 48px 48px 0 0;
     width: 100%;
     background-image: url(${props => props.imgSrcName});
@@ -111,12 +111,12 @@ const FeaturedCardImage = styled.div`
     background-position: center;
 `;
 
-const FeaturedCardTextContainer = styled.div`
+export const FeaturedCardTextContainer = styled.div`
     padding: 26px 54px 60px 24px;
     overflow: hidden;
 `;
 
-const FeaturedCardTextTitle = styled.h3`
+export const FeaturedCardTextTitle = styled.h3`
     font-display: auto;
     font-family: 'Muli', Arial, Helvetica, sans-serif;
     font-weight: 800;
@@ -131,7 +131,7 @@ const FeaturedCardTextTitle = styled.h3`
     margin: 0;
 `;
 
-const FeaturedCardTextBody = styled.h4`
+export const FeaturedCardTextBody = styled.h4`
     font-display: auto;
     font-family: 'Muli', Arial, Helvetica, sans-serif;
     font-weight: 800;
@@ -147,7 +147,7 @@ const FeaturedCardTextBody = styled.h4`
     margin: 0;
 `;
 
-const CollectionCardHoverEmoji = styled.p`
+export const CollectionCardHoverEmoji = styled.p`
     font-size: 88px;
     margin: 0;
     transition: transform 300ms ease-out;
@@ -158,7 +158,7 @@ const CollectionCardHoverEmoji = styled.p`
     position: absolute;
 `;
 
-const CollectionCardContainerWrapper = styled.div`
+export const CollectionCardContainerWrapper = styled.div`
     padding: 4px;
 
     max-width: 984px;
@@ -191,7 +191,7 @@ const CollectionCardContainerWrapper = styled.div`
     }
 `;
 
-const CollectionCardContainer = styled(NavLink)`
+export const CollectionCardContainer = styled(NavLink)`
     text-decoration: none;
     min-height: 336px;
     height: 100%;
@@ -231,7 +231,7 @@ const CollectionCardContainer = styled(NavLink)`
     }
 `;
 
-const CollectionCardImage = styled.div`
+export const CollectionCardImage = styled.div`
     border-radius: 48px 0 0 48px;
     width: 100%;
 
@@ -244,7 +244,7 @@ const CollectionCardImage = styled.div`
     }
 `;
 
-const CollectionCardTextContainer = styled.div`
+export const CollectionCardTextContainer = styled.div`
     padding: 0;
     overflow: hidden;
 
@@ -257,14 +257,14 @@ const CollectionCardTextContainer = styled.div`
     height: 100%;
 `;
 
-const CollectionCardTitleContainer = styled.div`
+export const CollectionCardTitleContainer = styled.div`
     align-self: start;
     justify-self: start;
 
     padding: 34px 54px 14px 32px;
 `;
 
-const CollectionCardTextTitle = styled.h3`
+export const CollectionCardTextTitle = styled.h3`
     font-display: auto;
     font-family: 'Muli', Arial, Helvetica, sans-serif;
     font-weight: 800;
@@ -283,7 +283,7 @@ const CollectionCardTextTitle = styled.h3`
     }
 `;
 
-const CollectionCardTextBody = styled.p`
+export const CollectionCardTextBody = styled.p`
     font-display: auto;
     font-family: 'Muli', Arial, Helvetica, sans-serif;
     font-weight: 400;
@@ -307,76 +307,77 @@ const CollectionCardTextBody = styled.p`
 `;
 
 export default () => {
-  return (
-    <FeaturedContainer>
-      <SectionLabel sectionName="FEATURED" featured/>
+    return (
+        <FeaturedContainer>
+            <SectionLabel sectionName="FEATURED" featured />
 
-      <FeaturedContentContainer>
-        <FeaturedCardContainerWrapper>
-          <FeaturedCardContainer to="/changelog">
-            <FeaturedCardImage
-              imgSrcName="/images/featured/body_changelog_2.png"/>
-            <FeaturedCardTextContainer>
-              <FeaturedCardTextTitle>
-                Changelog
-              </FeaturedCardTextTitle>
-              <FeaturedCardTextBody>
-                News and podcasts for developers
-              </FeaturedCardTextBody>
-            </FeaturedCardTextContainer>
-            <FeaturedCardHoverEmoji>
-              <span role="img" aria-labelledby="laptop emoji">
-                💻
-              </span>
-            </FeaturedCardHoverEmoji>
-          </FeaturedCardContainer>
-        </FeaturedCardContainerWrapper>
+            <FeaturedContentContainer>
+                <FeaturedCardContainerWrapper>
+                    <FeaturedCardContainer to="/changelog">
+                        <FeaturedCardImage imgSrcName="/images/featured/body_changelog_2.png" />
+                        <FeaturedCardTextContainer>
+                            <FeaturedCardTextTitle>
+                                Changelog
+                            </FeaturedCardTextTitle>
+                            <FeaturedCardTextBody>
+                                News and podcasts for developers
+                            </FeaturedCardTextBody>
+                        </FeaturedCardTextContainer>
+                        <FeaturedCardHoverEmoji>
+                            <span role="img" aria-labelledby="laptop emoji">
+                                💻
+                            </span>
+                        </FeaturedCardHoverEmoji>
+                    </FeaturedCardContainer>
+                </FeaturedCardContainerWrapper>
 
-        <FeaturedCardContainerWrapper>
-          <FeaturedCardContainer to="/indizr">
-            <FeaturedCardImage imgSrcName="/images/featured/hero_indizr2.jpg"/>
-            <FeaturedCardTextContainer>
-              <FeaturedCardTextTitle>
-                Indizr
-              </FeaturedCardTextTitle>
-              <FeaturedCardTextBody>
-                Everything Web 3.0
-              </FeaturedCardTextBody>
-            </FeaturedCardTextContainer>
-            <FeaturedCardHoverEmoji>
-              <span role="img" aria-labelledby="web emoji">
-                🕸
-              </span>
-            </FeaturedCardHoverEmoji>
-          </FeaturedCardContainer>
-        </FeaturedCardContainerWrapper>
+                <FeaturedCardContainerWrapper>
+                    <FeaturedCardContainer to="/indizr">
+                        <FeaturedCardImage imgSrcName="/images/featured/hero_indizr2.jpg" />
+                        <FeaturedCardTextContainer>
+                            <FeaturedCardTextTitle>
+                                Indizr
+                            </FeaturedCardTextTitle>
+                            <FeaturedCardTextBody>
+                                Everything Web 3.0
+                            </FeaturedCardTextBody>
+                        </FeaturedCardTextContainer>
+                        <FeaturedCardHoverEmoji>
+                            <span role="img" aria-labelledby="web emoji">
+                                🕸
+                            </span>
+                        </FeaturedCardHoverEmoji>
+                    </FeaturedCardContainer>
+                </FeaturedCardContainerWrapper>
 
-        <CollectionCardContainerWrapper>
-          <CollectionCardContainer to="/crypto-companions">
-            <CollectionCardImage
-              imgSrcName="/images/collections/hero_crypto_companions.jpg"/>
+                <CollectionCardContainerWrapper>
+                    <CollectionCardContainer to="/crypto-companions">
+                        <CollectionCardImage imgSrcName="/images/collections/hero_crypto_companions.jpg" />
 
-            <CollectionCardTextContainer>
-              <CollectionCardTitleContainer>
-                <CollectionLabel labelName="COLLECTION"/>
-                <CollectionCardTextTitle>
-                  Crypto Companions
-                </CollectionCardTextTitle>
-              </CollectionCardTitleContainer>
+                        <CollectionCardTextContainer>
+                            <CollectionCardTitleContainer>
+                                <CollectionLabel labelName="COLLECTION" />
+                                <CollectionCardTextTitle>
+                                    Crypto Companions
+                                </CollectionCardTextTitle>
+                            </CollectionCardTitleContainer>
 
-              <CollectionCardTextBody>
-                The brave crypto companies and creators driving
-                the world of crypto forward
-              </CollectionCardTextBody>
-            </CollectionCardTextContainer>
-            <CollectionCardHoverEmoji>
-              <span role="img" aria-labelledby="money with wings emoji">
-                💸
-              </span>
-            </CollectionCardHoverEmoji>
-          </CollectionCardContainer>
-        </CollectionCardContainerWrapper>
-      </FeaturedContentContainer>
-    </FeaturedContainer>
-  );
+                            <CollectionCardTextBody>
+                                The brave crypto companies and creators driving
+                                the world of crypto forward
+                            </CollectionCardTextBody>
+                        </CollectionCardTextContainer>
+                        <CollectionCardHoverEmoji>
+                            <span
+                                role="img"
+                                aria-labelledby="money with wings emoji"
+                            >
+                                💸
+                            </span>
+                        </CollectionCardHoverEmoji>
+                    </CollectionCardContainer>
+                </CollectionCardContainerWrapper>
+            </FeaturedContentContainer>
+        </FeaturedContainer>
+    );
 };
