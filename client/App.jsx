@@ -26,9 +26,9 @@ const GlobalStyle = createGlobalStyle`
 
 class App extends Component {
   render() {
-    const title = 'givebat';
+    const title = 'givebat.com';
     const description =
-      'givebat is a curated list of all the best content creators who have opted into Brave Rewards';
+      'givebat.com is a curated list of all the best content creators who have opted into Brave Rewards';
 
     return (
       <BrowserRouter>
