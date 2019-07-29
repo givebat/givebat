@@ -26,10 +26,13 @@ export default () => {
       <FeaturedContentBodyParagraph>
         My personal favourite site to look back on is slack.com: before the
         phenomenally successful workplace communication app was born, slack.com
-        was home to someone’s cat pictures until
-        2013. <FeaturedContentBodyParagraphLinkText target="_blank"
-                                                    href="https://web.archive.org/web/20130426025715/http://slack.com/">Go
-        check if you don’t believe me!</FeaturedContentBodyParagraphLinkText>
+        was home to someone’s cat pictures until 2013.{' '}
+        <FeaturedContentBodyParagraphLinkText
+          target="_blank"
+          href="https://web.archive.org/web/20130426025715/http://slack.com/"
+        >
+          Go check if you don’t believe me!
+        </FeaturedContentBodyParagraphLinkText>
       </FeaturedContentBodyParagraph>
       <FeaturedContentBodyParagraph>
         But the Internet Archive goes beyond just web pages. It also stores over
@@ -39,7 +42,8 @@ export default () => {
       </FeaturedContentBodyParagraph>
 
       <FeaturedContentBodyImage
-        imgSrc={'/images/featured/body_internetarchive.jpg'}/>
+        imgSrc={'/images/featured/body_internetarchive.jpg'}
+      />
 
       <FeaturedContentBodyParagraph>
         On the internet today, it often feels like everything is ephemeral and
@@ -59,4 +63,4 @@ export default () => {
       </FeaturedContentBodyParagraph>
     </>
   );
-}
+};

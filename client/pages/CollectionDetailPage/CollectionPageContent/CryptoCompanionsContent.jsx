@@ -12,25 +12,23 @@ export default () => {
   return (
     <>
       <CollectionBodyParagraph>
-        The Basic Attention Token is one of the most exciting,
-        innovative, and widely adopted projects in the entire crypto /
-        blockchain space.
+        The Basic Attention Token is one of the most exciting, innovative, and
+        widely adopted projects in the entire crypto / blockchain space.
       </CollectionBodyParagraph>
       <CollectionBodyParagraph>
-        Since the Bitcoin whitepaper was published in 2008,
-        entrepreneurial developers and early adopters have been building
-        infrastructure, new ideas, and new companies around the ideas
-        Satoshi Nakamoto presented.
+        Since the Bitcoin whitepaper was published in 2008, entrepreneurial
+        developers and early adopters have been building infrastructure, new
+        ideas, and new companies around the ideas Satoshi Nakamoto presented.
       </CollectionBodyParagraph>
       <CollectionBodyParagraph>
-        Naturally, Brave Rewards and the Basic Attention Token have
-        attracted the attention of many of these companies and creators.
-        Here are a few of them who have opted into Brave Rewards.
+        Naturally, Brave Rewards and the Basic Attention Token have attracted
+        the attention of many of these companies and creators. Here are a few of
+        them who have opted into Brave Rewards.
       </CollectionBodyParagraph>
 
       <CollectionBodyParagraph>
-        Starting off with some places where you can read about the
-        latest in crypto and blockchain:
+        Starting off with some places where you can read about the latest in
+        crypto and blockchain:
       </CollectionBodyParagraph>
 
       <CollectionCardContainer>
@@ -94,9 +92,9 @@ export default () => {
         And, of course, you have to keep up with the latest prices.
       </CollectionBodyParagraph>
       <CollectionBodyParagraph>
-        Here are a bunch of useful tools you can use to check crypto
-        prices, convert values between currencies, and watch broader
-        market trends take shape:
+        Here are a bunch of useful tools you can use to check crypto prices,
+        convert values between currencies, and watch broader market trends take
+        shape:
       </CollectionBodyParagraph>
 
       <CollectionCardContainer>
@@ -166,9 +164,9 @@ export default () => {
         But prices and news aren't everything.
       </CollectionBodyParagraph>
       <CollectionBodyParagraph>
-        If you need to store your assets, track particular wallets, and
-        even get into the nitty gritty of the Ethereum blockchain
-        itself, check out some of these Brave Rewards-verified projects:
+        If you need to store your assets, track particular wallets, and even get
+        into the nitty gritty of the Ethereum blockchain itself, check out some
+        of these Brave Rewards-verified projects:
       </CollectionBodyParagraph>
 
       <CollectionCardContainer>
@@ -205,9 +203,8 @@ export default () => {
       </CollectionCardContainer>
 
       <CollectionBodyParagraph>
-        And finally, there are games, blockchain infrastructure
-        projects, new kinds of social networks, and other projects that
-        defy categorization.
+        And finally, there are games, blockchain infrastructure projects, new
+        kinds of social networks, and other projects that defy categorization.
       </CollectionBodyParagraph>
       <CollectionBodyParagraph>
         Here are a few that are actively accepting BAT:
@@ -283,15 +280,14 @@ export default () => {
       </CollectionCardContainer>
 
       <CollectionBodyParagraph>
-        As you can see, a lot of the innovators, builders, and
-        entrepreneurs helping upgrade the web to version 3.0 have
-        already adopted Brave's vision of reinventing the attention
-        economy.
+        As you can see, a lot of the innovators, builders, and entrepreneurs
+        helping upgrade the web to version 3.0 have already adopted Brave's
+        vision of reinventing the attention economy.
       </CollectionBodyParagraph>
       <CollectionBodyParagraph>
-        Hopefully you found something awesome in there that you didn't
-        know about, and hopefully you'll spread the love and support
-        some of them with a tip. (They all accept BAT!)
+        Hopefully you found something awesome in there that you didn't know
+        about, and hopefully you'll spread the love and support some of them
+        with a tip. (They all accept BAT!)
       </CollectionBodyParagraph>
     </>
   );

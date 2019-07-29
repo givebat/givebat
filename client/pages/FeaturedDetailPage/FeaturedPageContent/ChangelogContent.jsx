@@ -24,8 +24,8 @@ export default () => {
         >
           changelog.com
         </FeaturedContentBodyParagraphLinkText>{' '}
-        domain is the fantastic collection of content that the Changelog
-        team has built.
+        domain is the fantastic collection of content that the Changelog team
+        has built.
       </FeaturedContentBodyParagraph>
 
       <FeaturedContentBodyImage
@@ -33,9 +33,9 @@ export default () => {
       />
 
       <FeaturedContentBodyParagraph>
-        If you’re a developer, Changelog has the most important and
-        relevant development news you need to stay up to date on the
-        latest industry trends and information.
+        If you’re a developer, Changelog has the most important and relevant
+        development news you need to stay up to date on the latest industry
+        trends and information.
       </FeaturedContentBodyParagraph>
       <FeaturedContentBodyParagraph>
         The Changelog team{' '}
@@ -76,34 +76,33 @@ export default () => {
       </FeaturedContentBodyParagraph>
 
       <FeaturedContentBodyParagraph>
-        (Many episodes also have an elegantly displayed transcription
-        underneath them, if you prefer reading over listening.)
+        (Many episodes also have an elegantly displayed transcription underneath
+        them, if you prefer reading over listening.)
       </FeaturedContentBodyParagraph>
 
       <FeaturedContentBodyParagraph>
-        Changelog is also fostering a global community around their
-        content. You can join{' '}
+        Changelog is also fostering a global community around their content. You
+        can join{' '}
         <FeaturedContentBodyParagraphLinkText
           target="_blank"
           href="https://changelog.com/community"
         >
-          the Changelog Developer Community in a very friendly Slack
-          chat
+          the Changelog Developer Community in a very friendly Slack chat
         </FeaturedContentBodyParagraphLinkText>{' '}
-        and get access to exclusive discounts and special offers from
-        their partners, as well as a backstage pass to everything the
-        Changelog team does.
+        and get access to exclusive discounts and special offers from their
+        partners, as well as a backstage pass to everything the Changelog team
+        does.
       </FeaturedContentBodyParagraph>
 
       <FeaturedContentBodyParagraph>
-        And even if you’re not a developer, there are still lots of
-        things on the site you might find valuable. For example,{' '}
+        And even if you’re not a developer, there are still lots of things on
+        the site you might find valuable. For example,{' '}
         <FeaturedContentBodyParagraphLinkText
           target="_blank"
           href=" https://changelog.com/podcast/323"
         >
-          an awesome interview with Brian Bondy, the CTO and
-          co-founder of Brave.
+          an awesome interview with Brian Bondy, the CTO and co-founder of
+          Brave.
         </FeaturedContentBodyParagraphLinkText>{' '}
         Listen to the story of{' '}
         <FeaturedContentBodyParagraphLinkText
@@ -127,11 +126,10 @@ export default () => {
       </FeaturedContentBodyParagraph>
 
       <FeaturedContentBodyParagraph>
-        Once the BAT SDK is built, released, and flourishing in the
-        wild, you’ll probably be able to support Changelog’s podcast
-        episodes with an amount of BAT proportional to how much time you
-        spend listening, but until then, you can send Changelog some BAT
-        through their site to say thanks.
+        Once the BAT SDK is built, released, and flourishing in the wild, you’ll
+        probably be able to support Changelog’s podcast episodes with an amount
+        of BAT proportional to how much time you spend listening, but until
+        then, you can send Changelog some BAT through their site to say thanks.
       </FeaturedContentBodyParagraph>
     </>
   );

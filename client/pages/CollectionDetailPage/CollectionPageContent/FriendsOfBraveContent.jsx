@@ -31,10 +31,12 @@ export default () => {
         advance Brave’s vision.
       </CollectionBodyParagraph>
       <CollectionBodyParagraph>
-        First up are some projects that were an inspiration
-        for <CollectionBodyParagraphBoldSpan>givebat</CollectionBodyParagraphBoldSpan> itself.
-        These are some fantastic places to see all the cool new sites and
-        creators adopting Brave Rewards. You’ll see both of these projects’
+        First up are some projects that were an inspiration for{' '}
+        <CollectionBodyParagraphBoldSpan>
+          givebat
+        </CollectionBodyParagraphBoldSpan>{' '}
+        itself. These are some fantastic places to see all the cool new sites
+        and creators adopting Brave Rewards. You’ll see both of these projects’
         creators hanging around in the Telegram chat and on the official
         r/BATproject subreddit.
       </CollectionBodyParagraph>
@@ -44,12 +46,14 @@ export default () => {
           contentName="The Daily Bat"
           urlLink="https://www.youtube.com/channel/UCtGMhfrxfHr90Xqw2RdmJgw"
           subtitle="Daily highlights of great Brave verified creators"
-          imageLink={'/images/thumbnails/thedailybat.jpg'}/>
+          imageLink={'/images/thumbnails/thedailybat.jpg'}
+        />
         <BategoryContentCard
           contentName="BATgrowth"
           urlLink="https://batgrowth.com/"
           subtitle="Watch the adoption of Brave and BAT happen"
-          imageLink={'/images/thumbnails/batgrowth.com.jpg'}/>
+          imageLink={'/images/thumbnails/batgrowth.com.jpg'}
+        />
       </CollectionCardContainer>
 
       <CollectionBodyParagraph>
@@ -65,22 +69,26 @@ export default () => {
           contentName="Cheddar"
           urlLink="https://cheddar.com"
           subtitle="The latest in business and tech news"
-          imageLink={'/images/thumbnails/cheddar.com.jpg'}/>
+          imageLink={'/images/thumbnails/cheddar.com.jpg'}
+        />
         <BategoryContentCard
           contentName="Qwant"
           urlLink="https://qwant.com"
           subtitle="A search engine that protects your privacy"
-          imageLink={'/images/thumbnails/qwant.com.jpg'}/>
+          imageLink={'/images/thumbnails/qwant.com.jpg'}
+        />
         <BategoryContentCard
           contentName="DuckDuckGo"
           urlLink="https://duckduckgo.com"
           subtitle="A search engine that doesn't track you"
-          imageLink={'/images/thumbnails/duckduckgo.com.jpg'}/>
+          imageLink={'/images/thumbnails/duckduckgo.com.jpg'}
+        />
         <BategoryContentCard
           contentName="Uphold"
           urlLink="https://uphold.com/"
           subtitle="Buy and sell digital currencies easily"
-          imageLink={'/images/thumbnails/uphold.com.jpg'}/>
+          imageLink={'/images/thumbnails/uphold.com.jpg'}
+        />
       </CollectionCardContainer>
 
       <CollectionBodyParagraph>
@@ -100,12 +108,14 @@ export default () => {
           contentName="Bart Baker"
           urlLink="https://www.youtube.com/BartBaKer"
           subtitle="High-quality song parodies with over 3 billion total views"
-          imageLink={'/images/thumbnails/BartBaker.jpg'}/>
+          imageLink={'/images/thumbnails/BartBaker.jpg'}
+        />
         <BategoryContentCard
           contentName="The Philip DeFranco Show"
           urlLink="https://www.youtube.com/channel/UClFSU9_bUb4Rc6OYfTt5SPw"
           subtitle="Daily news summaries with over 6 million subscribers"
-          imageLink={'/images/thumbnails/PhilipDeFranco.jpg'}/>
+          imageLink={'/images/thumbnails/PhilipDeFranco.jpg'}
+        />
       </CollectionCardContainer>
 
       <CollectionBodyParagraph>
@@ -115,4 +125,4 @@ export default () => {
       </CollectionBodyParagraph>
     </>
   );
-}
+};
