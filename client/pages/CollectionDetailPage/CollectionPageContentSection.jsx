@@ -182,6 +182,9 @@ export const CollectionCardContainer = styled.div`
       right: 0;
     }
   }
+  @media (max-width: 500px) {
+    margin-left: -24px;
+  }
 `;
 
 const CollectionCreditContainer = styled.div`
