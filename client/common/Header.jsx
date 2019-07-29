@@ -1,27 +1,27 @@
 import React from 'react';
-import styled, {css} from 'styled-components';
+import styled, { css } from 'styled-components';
 
 // import logoImage from '../images/logo_text@2x.png';
 
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const TopbarContainer = styled.div`
-    /* background-color: white; */
-    z-index: 2;
+  /* background-color: white; */
+  z-index: 2;
 
-    width: 100%;
-    height: 64px;
+  width: 100%;
+  height: 64px;
 
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
 
-    ${props =>
-  props.notch &&
-  css`
-            background-color: rgba(255, 255, 255, 0.8);
-            /* max-width: 1024px;
+  ${props =>
+    props.notch &&
+    css`
+      background-color: rgba(255, 255, 255, 0.8);
+      /* max-width: 1024px;
         margin-left: auto;
         margin-right: auto;
 
@@ -32,56 +32,56 @@ const TopbarContainer = styled.div`
         @media(max-width: 1024px) {
             border-radius: 0;
         } */
-        `}
+    `}
 `;
 
 const TopbarContentContainer = styled.div`
-    /* max-width: 984px; */
-    width: 100%;
-    height: 100%;
+  /* max-width: 984px; */
+  width: 100%;
+  height: 100%;
 
-    /* margin-left: auto;
+  /* margin-left: auto;
     margin-right: auto; */
 
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
 `;
 
 const LogoWordContainer = styled(NavLink)`
-    height: 20.1px;
-    width: 73.03px;
+  height: 20.1px;
+  width: 73.03px;
 
-    margin-left: 20px;
+  margin-left: 20px;
 
-    align-self: center;
-    justify-self: start;
+  align-self: center;
+  justify-self: start;
 
-    ${props =>
-  props.show &&
-  css`
-            visibility: hidden;
-        `}
+  ${props =>
+    props.show &&
+    css`
+      visibility: hidden;
+    `}
 `;
 
-const LogoWordImg = styled.img.attrs({src: '/images/logo_text@2x.png'})`
-    height: 100%;
-    width: 100%;
+const LogoWordImg = styled.img.attrs({ src: '/images/logo_text@2x.png' })`
+  height: 100%;
+  width: 100%;
 `;
 
 const AboutLink = styled(NavLink)`
-    margin-right: 28px;
+  margin-right: 28px;
 
-    font-family: 'Muli', Arial, Helvetica, sans-serif;
-    font-weight: 800;
-    font-style: normal;
+  font-family: 'Muli', Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-style: normal;
 
-    font-size: 16px;
-    text-decoration: none;
-    color: #9b9b9b;
+  font-size: 16px;
+  text-decoration: none;
+  color: #9b9b9b;
 
-    align-self: center;
-    justify-self: end;
+  align-self: center;
+  justify-self: end;
 `;
 
 export default props => {
@@ -89,7 +89,7 @@ export default props => {
     <TopbarContainer notch={props.notch}>
       <TopbarContentContainer>
         <LogoWordContainer to="/" show={props.show}>
-          <LogoWordImg/>
+          <LogoWordImg />
         </LogoWordContainer>
         <AboutLink to="/about">About</AboutLink>
       </TopbarContentContainer>
