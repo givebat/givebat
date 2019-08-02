@@ -5,10 +5,6 @@ import { createGlobalStyle } from 'styled-components';
 
 import { Helmet } from 'react-helmet';
 
-// import hero_skyfolk from '/images/featured/hero_theskyfolk.jpg';
-// import hero_internetarchive from '/images/featured/hero_internetarchive.gif';
-// import hero_friendsofbrave from '/images/collections/hero_friends_of_brave.jpg';
-
 import HomePage from './pages/HomePage/';
 import AboutPage from './pages/AboutPage/';
 import FeaturedDetailPage from './pages/FeaturedDetailPage/';
@@ -28,7 +24,8 @@ class App extends Component {
   render() {
     const title = 'givebat.com';
     const description =
-      'givebat.com is a curated list of all the best content creators who have opted into Brave Rewards';
+      'givebat.com is a place to find the greatest Brave Creators';
+    const ogImage = 'https://www.givebat.com/og-image.jpg';
 
     return (
       <BrowserRouter>
@@ -41,6 +38,15 @@ class App extends Component {
 
               <meta property="og:title" content={title} />
               <meta property="og:description" content={description} />
+              <meta property="og:image" content={ogImage} />
+              <meta property="og:site_name" content={title} />
+
+              <meta name="twitter:card" content="summary_large_image" />
+              <meta name="twitter:site" content="@givebat" />
+              <meta name="twitter:title" content={title} />
+              <meta name="twitter:description" content={description} />
+              <meta name="twitter:creator" content="@givebat" />
+              <meta name="twitter:image" content={ogImage} />
             </Helmet>
             <Switch>
               <Route exact path="/" component={HomePage} />
