@@ -53,6 +53,54 @@ class App extends Component {
 
               <Route path="/about" component={AboutPage} />
 
+              {/* ROUTE TEMPLATE */}
+              {/*
+              <Route
+                path="/contentslug"
+                render={props => (
+                  <FeaturedDetailPage
+                    {...props}
+                    title={'CONTENTTITLE'}
+                    subtitle={'CONTENTSUBTITLE'}
+                    link={'HTTPSEXTERNALLINK'}
+                    heroImage={'/images/featured/IMAGEFILEPATH.jpg'}
+                    author={'ARTICLEAUTHOR'}
+                    date={'ARTICLEDATE'}
+                  />
+                )}
+              />
+              */}
+
+              <Route
+                path="/yarn"
+                render={props => (
+                  <FeaturedDetailPage
+                    {...props}
+                    title={'Yarn'}
+                    subtitle={'Short video clips by quote'}
+                    link={'HTTPSEXTERNALLINK'}
+                    heroImage={'/images/featured/IMAGEFILEPATH.jpg'}
+                    author={'ARTICLEAUTHOR'}
+                    date={'ARTICLEDATE'}
+                  />
+                )}
+              />
+
+              <Route
+                path="/mynoise"
+                render={props => (
+                  <FeaturedDetailPage
+                    {...props}
+                    title={'myNoise'}
+                    subtitle={'Amazing audio for every situation'}
+                    link={'HTTPSEXTERNALLINK'}
+                    heroImage={'/images/featured/IMAGEFILEPATH.jpg'}
+                    author={'ARTICLEAUTHOR'}
+                    date={'ARTICLEDATE'}
+                  />
+                )}
+              />
+
               <Route
                 path="/indizr"
                 render={props => (

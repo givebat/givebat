@@ -309,7 +309,59 @@ export default () => {
     <FeaturedContainer>
       <SectionLabel sectionName="FEATURED" featured />
 
+      {/* CARD TEMPLATE */}
+      {/*
+        <FeaturedCardContainerWrapper>
+          <FeaturedCardContainer to="/CONTENTNAMESLUG">
+            <FeaturedCardImage imgSrcName="/images/featured/IMAGEFILEPATH.jpg" />
+            <FeaturedCardTextContainer>
+              <FeaturedCardTextTitle>TITLE</FeaturedCardTextTitle>
+              <FeaturedCardTextBody>SUBTITLE</FeaturedCardTextBody>
+            </FeaturedCardTextContainer>
+            <FeaturedCardHoverEmoji>
+              <span role="img" aria-labelledby="EMOJIDESCRIPTION">
+                EMOJIHERE
+              </span>
+            </FeaturedCardHoverEmoji>
+          </FeaturedCardContainer>
+        </FeaturedCardContainerWrapper>
+        */}
+
       <FeaturedContentContainer>
+        <FeaturedCardContainerWrapper>
+          <FeaturedCardContainer to="/mynoise">
+            <FeaturedCardImage imgSrcName="/images/featured/IMAGEFILEPATH.jpg" />
+            <FeaturedCardTextContainer>
+              <FeaturedCardTextTitle>myNoise</FeaturedCardTextTitle>
+              <FeaturedCardTextBody>
+                Amazing audio for every situation
+              </FeaturedCardTextBody>
+            </FeaturedCardTextContainer>
+            <FeaturedCardHoverEmoji>
+              <span role="img" aria-labelledby="audio speaker emoji">
+                🔊
+              </span>
+            </FeaturedCardHoverEmoji>
+          </FeaturedCardContainer>
+        </FeaturedCardContainerWrapper>
+
+        <FeaturedCardContainerWrapper>
+          <FeaturedCardContainer to="/yarn">
+            <FeaturedCardImage imgSrcName="/images/featured/IMAGEFILEPATH.jpg" />
+            <FeaturedCardTextContainer>
+              <FeaturedCardTextTitle>Yarn</FeaturedCardTextTitle>
+              <FeaturedCardTextBody>
+                Short video clips by quote
+              </FeaturedCardTextBody>
+            </FeaturedCardTextContainer>
+            <FeaturedCardHoverEmoji>
+              <span role="img" aria-labelledby="yarn emoji">
+                🧶
+              </span>
+            </FeaturedCardHoverEmoji>
+          </FeaturedCardContainer>
+        </FeaturedCardContainerWrapper>
+
         <FeaturedCardContainerWrapper>
           <FeaturedCardContainer to="/changelog">
             <FeaturedCardImage imgSrcName="/images/featured/body_changelog_2.png" />
