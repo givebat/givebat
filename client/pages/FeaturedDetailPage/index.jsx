@@ -17,7 +17,10 @@ export default props => {
         <meta name="description" content={description} />
 
         <meta property="og:title" content={title} />
-        <meta property="og:image" content={props.heroImage} />
+        <meta
+          property="og:image"
+          content={`https://givebat.com${props.heroImage}`}
+        />
         <meta property="og:description" content={description} />
         <meta property="og:site_name" content="givebat.com" />
 
