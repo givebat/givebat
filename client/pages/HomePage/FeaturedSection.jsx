@@ -327,7 +327,7 @@ export default () => {
         </FeaturedCardContainerWrapper>
         */}
 
-      <FeaturedContentContainer>
+      {/* <FeaturedContentContainer>
         <FeaturedCardContainerWrapper>
           <FeaturedCardContainer to="/mynoise">
             <FeaturedCardImage imgSrcName="/images/featured/IMAGEFILEPATH.jpg" />
@@ -360,7 +360,7 @@ export default () => {
               </span>
             </FeaturedCardHoverEmoji>
           </FeaturedCardContainer>
-        </FeaturedCardContainerWrapper>
+        </FeaturedCardContainerWrapper> */}
 
         <FeaturedCardContainerWrapper>
           <FeaturedCardContainer to="/changelog">
