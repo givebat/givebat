@@ -327,8 +327,8 @@ export default () => {
         </FeaturedCardContainerWrapper>
         */}
 
-      {/* <FeaturedContentContainer>
-        <FeaturedCardContainerWrapper>
+      <FeaturedContentContainer>
+        {/* <FeaturedCardContainerWrapper>
           <FeaturedCardContainer to="/mynoise">
             <FeaturedCardImage imgSrcName="/images/featured/IMAGEFILEPATH.jpg" />
             <FeaturedCardTextContainer>
