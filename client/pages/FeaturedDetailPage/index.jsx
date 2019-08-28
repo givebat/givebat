@@ -29,7 +29,10 @@ export default props => {
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:creator" content="@givebat" />
-        <meta name="twitter:image" content={props.heroImage} />
+        <meta
+          name="twitter:image"
+          content={`https://givebat.com${props.heroImage}`}
+        />
       </Helmet>
 
       <FeaturedPageHeaderSection {...props} />
