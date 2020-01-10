@@ -49,6 +49,7 @@ const TopbarContentContainer = styled.div`
 `;
 
 const LogoWordContainer = styled.a`
+  cursor: pointer;
   height: 20.1px;
   width: 73.03px;
 
@@ -70,6 +71,7 @@ const LogoWordImg = styled.img.attrs({ src: '/images/logo_text@2x.png' })`
 `;
 
 const AboutLink = styled.a`
+  cursor: pointer;
   margin-right: 28px;
 
   font-family: 'Muli', Arial, Helvetica, sans-serif;
@@ -88,7 +90,7 @@ export default props => {
   return (
     <TopbarContainer notch={props.notch}>
       <TopbarContentContainer>
-        <Link href='/' as='/'>
+        <Link href="/" as="/">
           <LogoWordContainer show={props.show}>
             <LogoWordImg />
           </LogoWordContainer>
