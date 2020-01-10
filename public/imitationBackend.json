@@ -1,0 +1,44 @@
+{
+  "changelog": {
+    "title": "Changelog",
+    "subtitle": "News and podcasts for developers",
+    "heroImage": "/images/featured/body_changelog_2.png",
+    "author": "Daniel James",
+    "date": "July 25th, 2019"
+  },
+  "sky-folk": {
+    "title": "SKÝ FÓLK",
+    "subtitle": "Stunning landscape photography and films",
+    "heroImage": "/images/featured/hero_theskyfolk.jpg",
+    "author": "Daniel James",
+    "date": "March 6th, 2019"
+  },
+  "internet-archive": {
+    "title": "Internet Archive",
+    "subtitle": "The world's largest librarys",
+    "heroImage": "/images/featured/hero_internetarchive.gif",
+    "author": "Daniel James",
+    "date": "March 6th, 2019"
+  },
+  "indizr": {
+    "title": "Indizr",
+    "subtitle": "Everything Web 3.0",
+    "heroImage": "/images/featured/IMAGEFILEPATH.jpg",
+    "author": "ARTICLEAUTHOR",
+    "date": "ARTICLEDATE"
+  },
+  "mynoise": {
+    "title": "Mynoise",
+    "subtitle": "Amazing audio for every situation",
+    "heroImage": "/images/featured/IMAGEFILEPATH.jpg",
+    "author": "ARTICLEAUTHOR",
+    "date": "ARTICLEDATE"
+  },
+  "yarn": {
+    "title": "yarn",
+    "subtitle": "Short video clips by quote",
+    "heroImage": "/images/featured/IMAGEFILEPATH.jpg",
+    "author": "ARTICLEAUTHOR",
+    "date": "ARTICLEDATE"
+  }
+}
