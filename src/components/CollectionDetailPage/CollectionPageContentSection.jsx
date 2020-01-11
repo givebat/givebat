@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { withRouter } from 'next/router';
 
 import CollectionLabel from '../../common/CollectionLabel';
 
@@ -254,7 +255,7 @@ const CollectionAuthorNameDate = styled.p`
   line-height: 20px;
 `;
 
-export default props => {
+export default withRouter(props => {
   return (
     <>
       <ContentSectionBackgroundWrapper>
@@ -266,8 +267,12 @@ export default props => {
             </CollectionTitleContainer>
 
             <CollectionBodyContainer>
-              {props.url.pathname === '/crypto-companions' && <CryptoCompanionsContent {...props} />}
-              {props.url.pathname === '/friends-of-brave' && <FriendsOfBraveContent {...props} />}
+              {props.router.pathname === '/crypto-companions' && (
+                <CryptoCompanionsContent {...props} />
+              )}
+              {props.router.pathname === '/friends-of-brave' && (
+                <FriendsOfBraveContent {...props} />
+              )}
             </CollectionBodyContainer>
 
             <CollectionCreditContainer>
@@ -286,4 +291,4 @@ export default props => {
       </ContentSectionBackgroundWrapper>
     </>
   );
-};
+});

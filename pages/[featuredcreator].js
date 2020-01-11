@@ -20,7 +20,7 @@ class Index extends Component {
   render() {
     const { res } = this.state;
     if (!res) return null;
-    const currentUrl = this.props.router.query.id;
+    const currentUrl = this.props.router.query.featuredcreator;
 
     console.log(res[currentUrl]);
 
