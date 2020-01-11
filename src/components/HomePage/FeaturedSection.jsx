@@ -363,7 +363,7 @@ export default () => {
         </FeaturedCardContainerWrapper> */}
 
         <FeaturedCardContainerWrapper>
-          <Link href={'/changelog'} as={'/changelog'}>
+          <Link href="/[featuredcreator]" as="/changelog">
             <FeaturedCardContainer>
               <FeaturedCardImage imgSrcName="/images/featured/body_changelog_2.png" />
               <FeaturedCardTextContainer>
@@ -382,7 +382,7 @@ export default () => {
         </FeaturedCardContainerWrapper>
 
         <FeaturedCardContainerWrapper>
-          <Link href={'/indizr'} as={'/indizr'}>
+          <Link href="/[featuredcreator]" as="/indizr">
             <FeaturedCardContainer>
               <FeaturedCardImage imgSrcName="/images/featured/hero_indizr2.jpg" />
               <FeaturedCardTextContainer>
@@ -399,7 +399,7 @@ export default () => {
         </FeaturedCardContainerWrapper>
 
         <CollectionCardContainerWrapper>
-          <Link href={'/crypto-companions'} as={'/crypto-companions'}>
+          <Link href="/crypto-companions" as="/crypto-companions">
             <CollectionCardContainer>
               <CollectionCardImage imgSrcName="/images/collections/hero_crypto_companions.jpg" />
 

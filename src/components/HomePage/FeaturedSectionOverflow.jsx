@@ -37,7 +37,7 @@ export default () => {
     <OverflowFeaturedContainer>
       <FeaturedContentContainer>
         <FeaturedCardContainerWrapper>
-          <Link href={'/sky-folk'} as={'/sky-folk'}>
+          <Link href="/[featuredcreator]" as="/sky-folk">
             <FeaturedCardContainer>
               <FeaturedCardImage imgSrcName="/images/featured/hero_theskyfolk.jpg" />
               <FeaturedCardTextContainer>
@@ -56,7 +56,7 @@ export default () => {
         </FeaturedCardContainerWrapper>
 
         <FeaturedCardContainerWrapper>
-          <Link href={'/internet-archive'} as={'/internet-archive'}>
+          <Link href="/[featuredcreator]" as="/internet-archive">
             <FeaturedCardContainer>
               <FeaturedCardImage imgSrcName="/images/featured/hero_internetarchive.gif" />
               <FeaturedCardTextContainer>
@@ -75,7 +75,7 @@ export default () => {
         </FeaturedCardContainerWrapper>
 
         <CollectionCardContainerWrapper>
-          <Link href={'/friends-of-brave'} as={'/friends-of-brave'}>
+          <Link href="/friends-of-brave" as="/friends-of-brave">
             <CollectionCardContainer>
               <CollectionCardImage imgSrcName="/images/collections/tn_friends_of_brave.jpg" />
 
