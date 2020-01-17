@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { withRouter } from 'next/router';
 
 import SkyFolkContent from './FeaturedPageContent/SkyFolkContent';
 import InternetArchiveContent from './FeaturedPageContent/InternetArchiveContent';
@@ -324,7 +325,7 @@ const FeaturedContentAuthorNameDate = styled.p`
   line-height: 20px;
 `;
 
-export default props => {
+export default withRouter(props => {
   return (
     <>
       <ContentSectionBackgroundWrapper>
@@ -347,7 +348,9 @@ export default props => {
               {/* BEGINNING OF BODY CONTENT THAT CAN BE PULLED IN THROUGH CMS */}
 
               {props.current === 'sky-folk' && <SkyFolkContent {...props} />}
-              {props.current === 'internet-archive' && <InternetArchiveContent {...props} />}
+              {props.current === 'internet-archive' && (
+                <InternetArchiveContent {...props} />
+              )}
               {props.current === 'indizr' && <IndizrContent {...props} />}
               {props.current === 'changelog' && <ChangelogContent {...props} />}
 
@@ -379,4 +382,4 @@ export default props => {
       </ContentSectionBackgroundWrapper>
     </>
   );
-};
+});

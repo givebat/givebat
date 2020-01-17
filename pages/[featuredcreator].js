@@ -4,7 +4,7 @@ import FeaturedDetailPage from '../src/components/FeaturedDetailPage';
 import axios from 'axios';
 import ErrorPage from './_error.js';
 
-class Index extends Component {
+class DynamicCreatorPage extends Component {
   state = {
     res: null,
   };
@@ -22,8 +22,6 @@ class Index extends Component {
     if (!res) return null;
     const currentUrl = this.props.router.query.featuredcreator;
 
-    console.log(res[currentUrl]);
-
     if (res[currentUrl] === undefined) {
       return <ErrorPage statusCode={404} />;
     }
@@ -36,4 +34,4 @@ class Index extends Component {
   }
 }
 
-export default withRouter(Index);
+export default withRouter(DynamicCreatorPage);
