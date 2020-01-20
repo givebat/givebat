@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import App from 'next/app';
 import Head from 'next/head';
+import '../styles.css'
 
 const DownloadBraveBannerWrapper = styled.div`
   height: 64px;
@@ -241,15 +242,6 @@ class MyApp extends App {
               href="https://fonts.googleapis.com/css?family=Muli:400,600,800,900"
               rel="stylesheet"
             />
-            <style jsx global>{`
-              body {
-                margin: 0;
-                padding: 0;
-              }
-              a:hover {
-                cursor: pointer;
-              }
-            `}</style>
           </Head>
           <Component {...pageProps} />
         </DownloadBannerWrapper>

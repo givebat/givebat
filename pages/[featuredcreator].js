@@ -1,37 +1,32 @@
-import React, { Component } from 'react';
-import { withRouter } from 'next/router';
+import React from 'react';
+import { useRouter } from 'next/router';
 import FeaturedDetailPage from '../src/components/FeaturedDetailPage';
-import axios from 'axios';
+import fetch from 'isomorphic-unfetch';
 import ErrorPage from './_error.js';
 
-class DynamicCreatorPage extends Component {
-  state = {
-    res: null,
+const FeaturedPage = props => {
+  const router = useRouter();
+
+  const currentUrl = router.query.featuredcreator;
+
+  if (props.creators[currentUrl] === undefined) {
+    return <ErrorPage statusCode={404} />;
+  }
+
+  const infoFromCms = props.creators && props.creators[currentUrl];
+
+  const allProps = { ...{ current: currentUrl }, ...infoFromCms };
+
+  return <FeaturedDetailPage {...allProps} />;
+};
+
+FeaturedPage.getInitialProps = async function() {
+  const res = await fetch('http://localhost:3000/imitationBackend.json');
+  const data = await res.json();
+
+  return {
+    creators: data,
   };
+};
 
-  componentDidMount() {
-    axios.get('/imitationBackend.json').then(res => {
-      this.setState({
-        res: res.data,
-      });
-    });
-  }
-
-  render() {
-    const { res } = this.state;
-    if (!res) return null;
-    const currentUrl = this.props.router.query.featuredcreator;
-
-    if (res[currentUrl] === undefined) {
-      return <ErrorPage statusCode={404} />;
-    }
-
-    const infoFromCms = res && res[currentUrl];
-
-    const allProps = { ...{ current: currentUrl }, ...infoFromCms };
-
-    return <FeaturedDetailPage {...allProps} />;
-  }
-}
-
-export default withRouter(DynamicCreatorPage);
+export default FeaturedPage;
