@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import App from 'next/app';
 import Head from 'next/head';
-import '../styles.css'
+import '../styles.css';
 
 const DownloadBraveBannerWrapper = styled.div`
   height: 64px;
@@ -185,49 +185,43 @@ const DownloadBraveNoThanksText = styled.p`
   padding: 0;
 `;
 
-function DownloadBannerWrapper({ children }) {
+function DownloadBanner() {
   const [noThankYou, setNoThankYou] = useState(false);
 
-  if (!noThankYou) {
-    return (
-      <>
-        {children}
-        <DownloadBraveBannerWrapper>
-          <DownloadBraveBannerContentWrapper>
-            <DownloadBraveBannerContentContainer>
-              <DownloadBraveLogo />
-              <DownloadBraveBannerInfoContainer>
-                <DownloadBraveBannerHeader>
-                  Brave: Experience the future of the web
-                </DownloadBraveBannerHeader>
-                <DownloadBraveBannerBody>
-                  Up to 8x faster than Chrome • Blocks ads and trackers •
-                  Supports Chrome Extensions
-                </DownloadBraveBannerBody>
-              </DownloadBraveBannerInfoContainer>
-              <DownloadBraveBannerButtonContainer>
-                <DownloadBraveOkayButton
-                  onClick={() => setNoThankYou(true)}
-                  target="_blank"
-                  href="https://brave.com/giv892"
-                >
-                  <DownloadBraveOkayText>Okay</DownloadBraveOkayText>
-                </DownloadBraveOkayButton>
-                <DownloadBraveNoThanksText
-                  onClick={() => {
-                    setNoThankYou(true);
-                    console.log('NO THANK YOU!!!');
-                  }}
-                >
-                  Not now
-                </DownloadBraveNoThanksText>
-              </DownloadBraveBannerButtonContainer>
-            </DownloadBraveBannerContentContainer>
-          </DownloadBraveBannerContentWrapper>
-        </DownloadBraveBannerWrapper>
-      </>
-    );
-  } else return children;
+  return !noThankYou ? (
+    <DownloadBraveBannerWrapper>
+      <DownloadBraveBannerContentWrapper>
+        <DownloadBraveBannerContentContainer>
+          <DownloadBraveLogo />
+          <DownloadBraveBannerInfoContainer>
+            <DownloadBraveBannerHeader>
+              Brave: Experience the future of the web
+            </DownloadBraveBannerHeader>
+            <DownloadBraveBannerBody>
+              Up to 8x faster than Chrome • Blocks ads and trackers • Supports
+              Chrome Extensions
+            </DownloadBraveBannerBody>
+          </DownloadBraveBannerInfoContainer>
+          <DownloadBraveBannerButtonContainer>
+            <DownloadBraveOkayButton
+              onClick={() => setNoThankYou(true)}
+              target="_blank"
+              href="https://brave.com/giv892"
+            >
+              <DownloadBraveOkayText>Okay</DownloadBraveOkayText>
+            </DownloadBraveOkayButton>
+            <DownloadBraveNoThanksText
+              onClick={() => {
+                setNoThankYou(true);
+              }}
+            >
+              Not now
+            </DownloadBraveNoThanksText>
+          </DownloadBraveBannerButtonContainer>
+        </DownloadBraveBannerContentContainer>
+      </DownloadBraveBannerContentWrapper>
+    </DownloadBraveBannerWrapper>
+  ) : null;
 }
 
 class MyApp extends App {
@@ -236,15 +230,14 @@ class MyApp extends App {
 
     return (
       <>
-        <DownloadBannerWrapper>
-          <Head>
-            <link
-              href="https://fonts.googleapis.com/css?family=Muli:400,600,800,900"
-              rel="stylesheet"
-            />
-          </Head>
-          <Component {...pageProps} />
-        </DownloadBannerWrapper>
+        <Head>
+          <link
+            href="https://fonts.googleapis.com/css?family=Muli:400,600,800,900"
+            rel="stylesheet"
+          />
+        </Head>
+        <Component {...pageProps} />
+        <DownloadBanner />
       </>
     );
   }

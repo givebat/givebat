@@ -21,7 +21,15 @@ const FeaturedPage = props => {
 };
 
 FeaturedPage.getInitialProps = async function() {
-  const res = await fetch('http://localhost:3000/imitationBackend.json');
+  const dev = process.env.NODE_ENV !== 'production';
+
+  console.log('dev', dev);
+
+  const urlToFetch = dev
+    ? 'http://localhost:3000/imitationBackend.json'
+    : 'https://givebat.dcj.now.sh/imitationBackend.json';
+
+  const res = await fetch(urlToFetch);
   const data = await res.json();
 
   return {
