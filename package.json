@@ -1,7 +1,7 @@
 {
-  "name": "nextjs",
+  "name": "givebat",
   "version": "1.0.0",
-  "description": "",
+  "description": "givebat.com is a curated directory of Brave creators",
   "main": "index.js",
   "scripts": {
     "dev": "next",
