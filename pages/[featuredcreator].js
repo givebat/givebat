@@ -27,7 +27,7 @@ FeaturedPage.getInitialProps = async function() {
 
   const urlToFetch = dev
     ? 'http://localhost:3000/imitationBackend.json'
-    : 'https://givebat.dcj.now.sh/imitationBackend.json';
+    : 'https://givebat.now.sh/imitationBackend.json';
 
   const res = await fetch(urlToFetch);
   const data = await res.json();
