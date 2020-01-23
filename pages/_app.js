@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import App from 'next/app';
 import Head from 'next/head';
-import Router from 'next/router';
-import withGA from 'next-ga';
-
 import '../styles.css';
+
+import Router from 'next/router';
+
+import * as gtag from '../lib/gtag';
+
+Router.events.on('routeChangeComplete', url => gtag.pageview(url));
 
 const DownloadBraveBannerWrapper = styled.div`
   height: 64px;
@@ -246,4 +249,4 @@ class MyApp extends App {
   }
 }
 
-export default withGA('UA-156807290-1', Router)(MyApp);
+export default MyApp;
