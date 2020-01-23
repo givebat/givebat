@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import App from 'next/app';
 import Head from 'next/head';
+import Router from 'next/router';
+import withGA from 'next-ga';
+
 import '../styles.css';
 
 const DownloadBraveBannerWrapper = styled.div`
@@ -243,4 +246,4 @@ class MyApp extends App {
   }
 }
 
-export default MyApp;
+export default withGA('UA-156807290-1', Router)(MyApp);
