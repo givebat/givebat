@@ -8,6 +8,14 @@ import Router from 'next/router';
 
 import * as gtag from '../lib/gtag';
 
+import { ThemeProvider } from 'styled-components';
+
+const theme = {
+  colors: {
+    // primary: '#0070f3',
+  },
+};
+
 Router.events.on('routeChangeComplete', url => gtag.pageview(url));
 
 const DownloadBraveBannerWrapper = styled.div`
@@ -235,7 +243,7 @@ class MyApp extends App {
     const { Component, pageProps } = this.props;
 
     return (
-      <>
+      <ThemeProvider theme={theme}>
         <Head>
           <link
             href="https://fonts.googleapis.com/css?family=Muli:400,600,800,900"
@@ -244,7 +252,7 @@ class MyApp extends App {
         </Head>
         <Component {...pageProps} />
         <DownloadBanner />
-      </>
+      </ThemeProvider>
     );
   }
 }
