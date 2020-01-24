@@ -222,7 +222,7 @@ function httpRequest(address, reqType, asyncProc) {
       }
     };
   } else {
-    req.timeout = 850;
+    // req.timeout = 850;
   }
   req.open(reqType, address, !!asyncProc);
   req.send();
