@@ -199,10 +199,64 @@ const DownloadBraveNoThanksText = styled.p`
   padding: 0;
 `;
 
-function DownloadBanner() {
-  const [noThankYou, setNoThankYou] = useState(false);
+// the functions below will determine if a user is in Brave or not
+// borrowed from here: https://gist.github.com/drbh/250a77a438624bc2619f0518dd5b38fe
 
-  return !noThankYou ? (
+// helper to find Brave in User Agent string
+function isBraveAgent(userAgentResponse) {
+  let isBraveIndex = ~userAgentResponse.indexOf('Brave');
+  if (isBraveIndex < 0) {
+    return true;
+  }
+  return false;
+}
+
+function httpRequest(address, reqType, asyncProc) {
+  var req = window.XMLHttpRequest
+    ? new XMLHttpRequest()
+    : new ActiveXObject('Microsoft.XMLHTTP');
+  if (asyncProc) {
+    req.onreadystatechange = function() {
+      if (this.readyState == 4) {
+        asyncProc(this);
+      }
+    };
+  } else {
+    // req.timeout = 850;
+  }
+  req.open(reqType, address, !!asyncProc);
+  req.send();
+  return req;
+}
+
+// Check reflected User Agent from whitelisted website (duckduckgo.com)
+function checkIsBrave() {
+  var isBraveBrower = false;
+  var req = httpRequest(
+    'https://api.duckduckgo.com/?q=whats+my+user+agent&format=json&pretty=1',
+    'GET'
+  );
+  var duckDuckResponse = JSON.parse(req.responseText);
+  var userAgentResponse = duckDuckResponse['Answer'];
+  var foundBraveInUserAgent = isBraveAgent(userAgentResponse);
+  if (foundBraveInUserAgent) {
+    isBraveBrower = true;
+  }
+  return isBraveBrower;
+}
+
+function DownloadBanner() {
+  let isBrave = false;
+
+  try {
+    isBrave = checkIsBrave();
+  } catch (err) {
+    // console.log(err);
+  }
+
+  const [userHasClickedNoThankYou, setNoThankYou] = useState(false);
+
+  return !userHasClickedNoThankYou && !isBrave ? (
     <DownloadBraveBannerWrapper>
       <DownloadBraveBannerContentWrapper>
         <DownloadBraveBannerContentContainer>
