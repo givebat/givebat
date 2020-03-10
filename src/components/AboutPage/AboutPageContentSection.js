@@ -471,19 +471,6 @@ export default () => {
                   <AboutTeamMemberRole>UI / UX</AboutTeamMemberRole>
                 </AboutTeamMemberInfoContainer>
               </AboutTeamMemberContainer>
-
-              {/* Shujun */}
-              <AboutTeamMemberContainer
-                target="_blank"
-                href="https://www.linkedin.com/in/shujun-bian-1b01b594/"
-              >
-                <AboutTeamMemberPhoto imgSrc={'/images/about/shujun.jpeg'} />
-
-                <AboutTeamMemberInfoContainer>
-                  <AboutTeamMemberName>Shujun Bian</AboutTeamMemberName>
-                  <AboutTeamMemberRole>Backend</AboutTeamMemberRole>
-                </AboutTeamMemberInfoContainer>
-              </AboutTeamMemberContainer>
             </AboutTeamContainer>
           </AboutSection>
 

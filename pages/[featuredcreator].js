@@ -22,8 +22,7 @@ const FeaturedPage = props => {
 
 FeaturedPage.getInitialProps = async function() {
   const dev = process.env.NODE_ENV !== 'production';
-
-  console.log('dev', dev);
+  // console.log('dev', dev);
 
   const urlToFetch = dev
     ? 'http://localhost:3000/imitationBackend.json'
