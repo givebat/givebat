@@ -192,7 +192,9 @@ const AboutTeamMemberContainer = styled.a`
   }
 `;
 
-const AboutTeamMemberPhoto = styled.img.attrs(props => ({ src: props.imgSrc }))`
+const AboutTeamMemberPhoto = styled.img.attrs((props) => ({
+  src: props.imgSrc,
+}))`
   height: 180px;
   width: 100%;
 
@@ -317,12 +319,12 @@ const AboutTwitterButton = styled.a`
   }
 `;
 
-const AboutTwitterText = styled.img.attrs(props => ({ src: props.imgSrc }))`
+const AboutTwitterText = styled.img.attrs((props) => ({ src: props.imgSrc }))`
   width: 85px;
 `;
 
 const AboutPageBottomImage = styled.div`
-  background-image: url(${props => props.imgSrc});
+  background-image: url(${(props) => props.imgSrc});
   background-position: right bottom;
   background-size: contain;
   background-repeat: no-repeat;
@@ -446,10 +448,7 @@ export default () => {
             </AboutBodyParagraph>
             <AboutTeamContainer>
               {/* Daniel */}
-              <AboutTeamMemberContainer
-                target="_blank"
-                href="https://danielcolinjames.com"
-              >
+              <AboutTeamMemberContainer target="_blank" href="https://dcj.dev">
                 <AboutTeamMemberPhoto imgSrc={'/images/about/daniel.jpg'} />
 
                 <AboutTeamMemberInfoContainer>
@@ -462,7 +461,7 @@ export default () => {
               {/* Evan */}
               <AboutTeamMemberContainer
                 target="_blank"
-                href="http://evanfeng.me"
+                href="https://evanfeng.me"
               >
                 <AboutTeamMemberPhoto imgSrc={'/images/about/evan.jpeg'} />
 
